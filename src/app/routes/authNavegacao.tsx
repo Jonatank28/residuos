@@ -23,8 +23,6 @@ import TelaBackup from '../paginas/backup';
 import TelaAdicionarRegioes from '../paginas/adicionarRegioes';
 import TelaRegioes from '../paginas/regioes';
 import TelaMotivos from '../paginas/motivos';
-import TelaMotivosParada from '../paginas/motivos copy';
-import TelaListaParadas from '../paginas/listaParadas';
 import TelaColetaResiduos from '../paginas/coleta/coletaResiduos';
 import TelaResiduo from '../paginas/residuo';
 import TelaListaResiduos from '../paginas/listaResiduos';
@@ -54,6 +52,8 @@ import TelaListaBalancasTCP from '../paginas/listarBalancasTCP';
 import { IScreenProps } from 'vision-common';
 import { BackHandler } from 'react-native';
 import { IScreenAuth } from './types';
+import TelaListaParadas from '../paginas/paradas/listaParadas';
+import TelaAdicionarParadas from '../paginas/paradas/adicionarParadas';
 
 
 const AppStack = createStackNavigator<AuthNavigatorParamsList>();
@@ -101,8 +101,6 @@ const components: Record<string, IScreenAuth<''>> = {
   TelaFiltrarColetas: (props: any) => ScreenWrapper({ ...props, component: TelaFiltrarColetas }),
   TelaClientes: (props: any) => ScreenWrapper({ ...props, component: TelaClientes }),
   TelaMotivos: (props: any) => ScreenWrapper({ ...props, component: TelaMotivos }),
-  TelaMotivosParada: (props: any) => ScreenWrapper({ ...props, component: TelaMotivosParada }),
-  TelaListaParadas: (props: any) => ScreenWrapper({ ...props, component: TelaListaParadas }),
   TelaClienteContainers: (props: any) => ScreenWrapper({ ...props, component: TelaClienteContainers }),
   TelaDetalhesCliente: (props: any) => ScreenWrapper({ ...props, component: TelaDetalhesCliente }),
   TelaRascunhos: (props: any) => ScreenWrapper({ ...props, component: TelaRascunhos }),
@@ -120,6 +118,9 @@ const components: Record<string, IScreenAuth<''>> = {
   Assinatura: (props: any) => ScreenWrapper({ ...props, component: Assinatura }),
   TelaRecusaAssinatura: (props: any) => ScreenWrapper({ ...props, component: TelaRecusaAssinatura }),
   TelaRelatorio: (props: any) => ScreenWrapper({ ...props, component: TelaRelatorio }),
+  // paradas
+  TelaListaParadas: (props: any) => ScreenWrapper({ ...props, component: TelaListaParadas }),
+  TelaAdicionarParadas: (props: any) => ScreenWrapper({ ...props, component: TelaAdicionarParadas }),
 }
 
 const AuthRotas = () => (

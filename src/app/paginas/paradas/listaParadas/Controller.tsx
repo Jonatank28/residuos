@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { AuthRoutes } from "../../routes/routes";
-import { IControllerAuth } from "../../routes/types";
+import { AuthRoutes } from "../../../routes/routes";
+import { IControllerAuth } from "../../../routes/types";
 
 interface Props extends IControllerAuth<AuthRoutes.ListaParadas> { }
 

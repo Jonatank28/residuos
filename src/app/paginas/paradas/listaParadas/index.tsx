@@ -1,10 +1,10 @@
 import React from 'react';
-import { IScreenAuth } from '../../routes/types';
-import { AuthRoutes } from '../../routes/routes';
+import { IScreenAuth } from '../../../routes/types';
+import { AuthRoutes } from '../../../routes/routes';
 import Controller from './Controller';
 import * as Styles from './styles';
 import I18n from 'i18n-js';
-import Cabecalho from '../../componentes/cabecalho';
+import Cabecalho from '../../../componentes/cabecalho';
 import { FlatList, View } from 'react-native';
 import FeaterIcon from 'react-native-vector-icons/Feather'
 
