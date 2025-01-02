@@ -1,0 +1,862 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TelaResiduo /> matches last snapshot 1`] = `
+Array [
+  <View
+    hasBorderBottom={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#56AA69",
+          "borderBottomColor": "#F5F4F4",
+          "borderBottomWidth": 0,
+          "flexDirection": "row",
+          "paddingBottom": 10,
+          "paddingLeft": 30,
+          "paddingRight": 30,
+          "paddingTop": 20,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+          },
+        ]
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 25,
+            },
+            Array [
+              Object {},
+            ],
+            Object {
+              "fontFamily": "Feather",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "Proxima-Bold",
+            "fontSize": 16,
+            "fontWeight": "500",
+          },
+        ]
+      }
+    >
+      [missing "en.screens.residue.titleAdd" translation]
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexDirection": "row-reverse",
+            "flexGrow": 1,
+            "flexShrink": 1,
+          },
+        ]
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F5F4F4",
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "padding": 20,
+        }
+      }
+      onScroll={[Function]}
+      scrollEventThrottle={0}
+      showsVerticalScrollIndicator={false}
+      style={
+        Array [
+          Object {},
+        ]
+      }
+      vertical={true}
+    >
+      <View>
+        <View
+          marginBottom={10}
+          marginLeft={0}
+          marginRight={0}
+          marginTop={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 5,
+                "marginBottom": 10,
+                "marginLeft": 0,
+                "marginRight": 0,
+                "marginTop": 0,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "paddingBottom": 0,
+                  "paddingLeft": 20,
+                  "paddingRight": 10,
+                  "paddingTop": 10,
+                },
+              ]
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#3C3C3C",
+                    "fontFamily": "Proxima-Bold",
+                    "fontSize": 16,
+                    "fontWeight": "500",
+                  },
+                ]
+              }
+            >
+              [missing "en.screens.residue.residueInfo" translation]
+            </Text>
+          </View>
+          <View
+            paddingBottom={10}
+            paddingLeft={20}
+            paddingRight={20}
+            paddingTop={10}
+            style={
+              Array [
+                Object {
+                  "alignItems": "flex-start",
+                  "paddingBottom": 10,
+                  "paddingLeft": 20,
+                  "paddingRight": 20,
+                  "paddingTop": 10,
+                },
+              ]
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#F5F4F4",
+                  "borderRadius": 5,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "marginBottom": 10,
+                  "marginLeft": 0,
+                  "marginRight": 0,
+                  "marginTop": 0,
+                  "minHeight": 50,
+                  "opacity": 1,
+                  "paddingBottom": 10,
+                  "paddingLeft": 20,
+                  "paddingRight": 10,
+                  "paddingTop": 10,
+                }
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flexBasis": 0,
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                    },
+                  ]
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#3C3C3C",
+                        "fontFamily": "Proxima-Semibold",
+                        "fontSize": 14,
+                        "fontWeight": "400",
+                      },
+                    ]
+                  }
+                >
+                  [missing "en.screens.residue.residueMessage" translation]
+                </Text>
+              </View>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flexBasis": 0,
+                      "flexGrow": 0.1,
+                      "flexShrink": 1,
+                    },
+                  ]
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#3C3C3C",
+                        "fontSize": 25,
+                      },
+                      Array [
+                        Object {},
+                      ],
+                      Object {
+                        "fontFamily": "Feather",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
+            <View
+              accessible={true}
+              focusable={false}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#F5F4F4",
+                  "borderRadius": 5,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "marginBottom": 10,
+                  "marginLeft": 0,
+                  "marginRight": 0,
+                  "marginTop": 0,
+                  "minHeight": 50,
+                  "opacity": 1,
+                  "paddingBottom": 10,
+                  "paddingLeft": 20,
+                  "paddingRight": 10,
+                  "paddingTop": 10,
+                }
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flexBasis": 0,
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                    },
+                  ]
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#3C3C3C",
+                        "fontFamily": "Proxima-Semibold",
+                        "fontSize": 14,
+                        "fontWeight": "400",
+                      },
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "flexDirection": "row",
+                  },
+                ]
+              }
+            >
+              <TextInput
+                allowFontScaling={true}
+                height={50}
+                keyboardType="decimal-pad"
+                onBlur={[Function]}
+                onChangeText={[Function]}
+                onFocus={[Function]}
+                placeholder="[missing \\"en.screens.residue.amount\\" translation]"
+                placeholderTextColor="#B7BCC3"
+                rejectResponderTermination={true}
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#F5F4F4",
+                      "borderRadius": 5,
+                      "color": "#3C3C3C",
+                      "flexBasis": 0,
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                      "marginBottom": 10,
+                      "marginLeft": 0,
+                      "marginRight": 0,
+                      "marginTop": 0,
+                      "minHeight": 50,
+                      "paddingBottom": 10,
+                      "paddingLeft": 10,
+                      "paddingRight": 10,
+                      "paddingTop": 10,
+                      "width": "100%",
+                    },
+                  ]
+                }
+                underlineColorAndroid="transparent"
+                value=""
+              />
+              <TextInput
+                allowFontScaling={true}
+                editable={false}
+                flex={0.4}
+                height={50}
+                marginLeft={10}
+                placeholder=""
+                placeholderTextColor="#3C3C3C"
+                rejectResponderTermination={true}
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#F5F4F4",
+                      "borderRadius": 5,
+                      "color": "#3C3C3C",
+                      "flexBasis": 0,
+                      "flexGrow": 0.4,
+                      "flexShrink": 1,
+                      "marginBottom": 10,
+                      "marginLeft": 10,
+                      "marginRight": 0,
+                      "marginTop": 0,
+                      "minHeight": 50,
+                      "paddingBottom": 10,
+                      "paddingLeft": 10,
+                      "paddingRight": 10,
+                      "paddingTop": 10,
+                      "width": "100%",
+                    },
+                  ]
+                }
+                underlineColorAndroid="transparent"
+                value=""
+              />
+            </View>
+            <TextInput
+              allowFontScaling={true}
+              autoCorrect={true}
+              height={100}
+              maxLength={200}
+              multiline={true}
+              onChangeText={[Function]}
+              placeholder="[missing \\"en.screens.residue.observation\\" translation]"
+              placeholderTextColor="#B7BCC3"
+              rejectResponderTermination={true}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#F5F4F4",
+                    "borderRadius": 5,
+                    "color": "#3C3C3C",
+                    "flexBasis": 0,
+                    "flexGrow": 1,
+                    "flexShrink": 1,
+                    "marginBottom": 10,
+                    "marginLeft": 0,
+                    "marginRight": 0,
+                    "marginTop": 0,
+                    "minHeight": 100,
+                    "paddingBottom": 10,
+                    "paddingLeft": 10,
+                    "paddingRight": 10,
+                    "paddingTop": 10,
+                    "width": "100%",
+                  },
+                ]
+              }
+              textAlignVertical="top"
+              underlineColorAndroid="transparent"
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "flexBasis": 0,
+                    "flexDirection": "row",
+                    "flexGrow": 1,
+                    "flexShrink": 1,
+                    "justifyContent": "center",
+                  },
+                ]
+              }
+            >
+              <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "justifyContent": "center",
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  accessibilityLiveRegion="polite"
+                  accessibilityRole="checkbox"
+                  accessibilityState={
+                    Object {
+                      "checked": false,
+                      "disabled": undefined,
+                    }
+                  }
+                  accessible={true}
+                  focusable={false}
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Array [
+                      Object {
+                        "overflow": "hidden",
+                      },
+                      Object {
+                        "borderRadius": 18,
+                        "padding": 6,
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "opacity": 0,
+                      }
+                    }
+                  >
+                    <Text
+                      accessibilityElementsHidden={true}
+                      allowFontScaling={false}
+                      importantForAccessibility="no-hide-descendants"
+                      pointerEvents="none"
+                      selectable={false}
+                      style={
+                        Array [
+                          Object {
+                            "color": "#F78D24",
+                            "fontSize": 24,
+                          },
+                          Array [
+                            Object {
+                              "lineHeight": 24,
+                              "transform": Array [
+                                Object {
+                                  "scaleX": 1,
+                                },
+                              ],
+                            },
+                            Object {
+                              "backgroundColor": "transparent",
+                            },
+                          ],
+                          Object {
+                            "fontFamily": "Material Design Icons",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                          Object {},
+                        ]
+                      }
+                    >
+                      󰄬
+                    </Text>
+                  </View>
+                </View>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#515151",
+                        "fontFamily": "Proxima-Semibold",
+                        "fontSize": 14.5,
+                        "fontWeight": "400",
+                      },
+                    ]
+                  }
+                >
+                  [missing "en.screens.residue.excess" translation]
+                </Text>
+              </View>
+              <View
+                accessible={true}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "justifyContent": "center",
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  accessibilityLiveRegion="polite"
+                  accessibilityRole="checkbox"
+                  accessibilityState={
+                    Object {
+                      "checked": false,
+                      "disabled": undefined,
+                    }
+                  }
+                  accessible={true}
+                  focusable={false}
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Array [
+                      Object {
+                        "overflow": "hidden",
+                      },
+                      Object {
+                        "borderRadius": 18,
+                        "padding": 6,
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "opacity": 0,
+                      }
+                    }
+                  >
+                    <Text
+                      accessibilityElementsHidden={true}
+                      allowFontScaling={false}
+                      importantForAccessibility="no-hide-descendants"
+                      pointerEvents="none"
+                      selectable={false}
+                      style={
+                        Array [
+                          Object {
+                            "color": "#F91E1E",
+                            "fontSize": 24,
+                          },
+                          Array [
+                            Object {
+                              "lineHeight": 24,
+                              "transform": Array [
+                                Object {
+                                  "scaleX": 1,
+                                },
+                              ],
+                            },
+                            Object {
+                              "backgroundColor": "transparent",
+                            },
+                          ],
+                          Object {
+                            "fontFamily": "Material Design Icons",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                          Object {},
+                        ]
+                      }
+                    >
+                      󰄬
+                    </Text>
+                  </View>
+                </View>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#515151",
+                        "fontFamily": "Proxima-Semibold",
+                        "fontSize": 14.5,
+                        "fontWeight": "400",
+                      },
+                    ]
+                  }
+                >
+                  [missing "en.screens.residue.notAccording" translation]
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          marginBottom={0}
+          marginLeft={0}
+          marginRight={0}
+          marginTop={10}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 5,
+                "marginBottom": 0,
+                "marginLeft": 0,
+                "marginRight": 0,
+                "marginTop": 10,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "paddingBottom": 0,
+                  "paddingLeft": 20,
+                  "paddingRight": 10,
+                  "paddingTop": 10,
+                },
+              ]
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#3C3C3C",
+                    "fontFamily": "Proxima-Bold",
+                    "fontSize": 16,
+                    "fontWeight": "500",
+                  },
+                ]
+              }
+            >
+              [missing "en.screens.residue.addPhotos" translation]
+            </Text>
+            <Text
+              allowFontScaling={false}
+              onPress={[Function]}
+              style={
+                Array [
+                  Object {
+                    "color": "#3C3C3C",
+                    "fontSize": 25,
+                  },
+                  Array [
+                    Object {},
+                  ],
+                  Object {
+                    "fontFamily": "Feather",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+          <View
+            paddingBottom={10}
+            paddingLeft={20}
+            paddingRight={20}
+            paddingTop={10}
+            style={
+              Array [
+                Object {
+                  "alignItems": "flex-start",
+                  "paddingBottom": 10,
+                  "paddingLeft": 20,
+                  "paddingRight": 20,
+                  "paddingTop": 10,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "flexDirection": "row",
+                    "flexWrap": "wrap",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "flexBasis": 0,
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#515151",
+                        "fontFamily": "Proxima-Semibold",
+                        "fontSize": 12,
+                        "fontWeight": "400",
+                      },
+                    ]
+                  }
+                >
+                  [missing "en.screens.residue.addPhotos" translation]
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "marginBottom": 30,
+                "marginLeft": 20,
+                "marginRight": 20,
+                "marginTop": 30,
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#56AA69",
+                "borderRadius": 5,
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+                "justifyContent": "center",
+                "minHeight": 50,
+                "opacity": 1,
+                "position": "relative",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontFamily": "Proxima-Bold",
+                    "fontSize": 16,
+                    "fontWeight": "500",
+                  },
+                ]
+              }
+              textColor="#FFFFFF"
+            >
+              [missing "en.screens.residue.add" translation]
+            </Text>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>,
+]
+`;

@@ -1,0 +1,1 @@
+export default '@react-native-community/netinfo/jest/netinfo-mock.js';

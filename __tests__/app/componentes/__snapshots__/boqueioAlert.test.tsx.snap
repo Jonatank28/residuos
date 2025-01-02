@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BloqueioAlert /> matches last snapshot 1`] = `
+<Modal
+  animationType="fade"
+  hardwareAccelerated={false}
+  style={
+    Array [
+      Object {},
+    ]
+  }
+  transparent={true}
+  visible={true}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0, 0, 0, 0.5)",
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "justifyContent": "center",
+          "position": "relative",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 10,
+            "height": "30%",
+            "justifyContent": "center",
+            "width": "80%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexBasis": 0,
+              "flexDirection": "row",
+              "flexGrow": 0.5,
+              "flexShrink": 1,
+              "paddingTop": 5,
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#3C3C3C",
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+                "fontFamily": "Proxima-Bold",
+                "fontSize": 16,
+                "fontWeight": "500",
+                "textAlign": "center",
+              },
+            ]
+          }
+        >
+          [missing "en.alerts.attention" translation]
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "justifyContent": "center",
+              "paddingLeft": 20,
+              "paddingRight": 20,
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <RCTScrollView
+          contentContainerStyle={
+            Object {
+              "padding": 5,
+            }
+          }
+          showsVerticalScrollIndicator={true}
+          style={
+            Array [
+              Object {},
+            ]
+          }
+          vertical={true}
+        >
+          <View>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#3C3C3C",
+                    "fontFamily": "Proxima-Bold",
+                    "fontSize": 16,
+                    "fontWeight": "500",
+                    "textAlign": "center",
+                  },
+                ]
+              }
+            >
+              [missing "en.exceptions.customs.lockSpaceMessage" translation]
+            </Text>
+          </View>
+        </RCTScrollView>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "paddingBottom": 20,
+              "paddingTop": 20,
+            },
+          ]
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#E2E2E2",
+                "fontSize": 30,
+              },
+              Array [
+                Object {},
+              ],
+              Object {
+                "fontFamily": "Feather",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+</Modal>
+`;

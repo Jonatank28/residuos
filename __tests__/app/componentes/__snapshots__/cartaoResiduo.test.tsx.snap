@@ -1,0 +1,540 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartaoResiduo /> matches last snapshot 1`] = `
+<View
+  backgroundColor={null}
+  marginBottom={0}
+  marginLeft={0}
+  marginRight={0}
+  marginTop={0}
+  pointerEvents="auto"
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 5,
+        "flexDirection": "row",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "position": "relative",
+      },
+    ]
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "flexBasis": 0,
+        "flexDirection": "column",
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "opacity": 1,
+        "paddingBottom": 5,
+        "paddingTop": 5,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "paddingLeft": 10,
+            "paddingRight": 5,
+            "paddingTop": 5,
+          },
+        ]
+      }
+    >
+      <Text
+        hasBackgroundColor={false}
+        style={
+          Array [
+            Object {
+              "color": "#3C3C3C",
+              "fontFamily": "Proxima-Bold",
+              "fontSize": 16,
+              "fontWeight": "500",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "paddingBottom": 10,
+            "paddingLeft": 10,
+            "paddingRight": 50,
+            "paddingTop": 10,
+          },
+        ]
+      }
+    >
+      <Text
+        hasBackgroundColor={false}
+        style={
+          Array [
+            Object {
+              "color": "#515151",
+              "fontFamily": "Proxima-Semibold",
+              "fontSize": 12,
+              "fontWeight": "400",
+            },
+          ]
+        }
+      >
+        [missing "en.components.residueCard.amount" translation]
+      </Text>
+      <Text
+        hasBackgroundColor={false}
+        style={
+          Array [
+            Object {
+              "color": "#515151",
+              "fontFamily": "Proxima-Semibold",
+              "fontSize": 12,
+              "fontWeight": "400",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`<CartaoResiduo /> matches last snapshot not exclude wast 1`] = `
+<View
+  backgroundColor={null}
+  marginBottom={0}
+  marginLeft={0}
+  marginRight={0}
+  marginTop={0}
+  pointerEvents="auto"
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 5,
+        "flexDirection": "row",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "position": "relative",
+      },
+    ]
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "flexBasis": 0,
+        "flexDirection": "column",
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "opacity": 1,
+        "paddingBottom": 5,
+        "paddingTop": 5,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "paddingLeft": 10,
+            "paddingRight": 5,
+            "paddingTop": 5,
+          },
+        ]
+      }
+    >
+      <Text
+        hasBackgroundColor={false}
+        style={
+          Array [
+            Object {
+              "color": "#3C3C3C",
+              "fontFamily": "Proxima-Bold",
+              "fontSize": 16,
+              "fontWeight": "500",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "paddingBottom": 10,
+            "paddingLeft": 10,
+            "paddingRight": 50,
+            "paddingTop": 10,
+          },
+        ]
+      }
+    >
+      <Text
+        hasBackgroundColor={false}
+        style={
+          Array [
+            Object {
+              "color": "#515151",
+              "fontFamily": "Proxima-Semibold",
+              "fontSize": 12,
+              "fontWeight": "400",
+            },
+          ]
+        }
+      >
+        [missing "en.components.residueCard.amount" translation]
+      </Text>
+      <Text
+        hasBackgroundColor={false}
+        style={
+          Array [
+            Object {
+              "color": "#515151",
+              "fontFamily": "Proxima-Semibold",
+              "fontSize": 12,
+              "fontWeight": "400",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`<CartaoResiduo /> matches last snapshot not exclude wast but has edit 1`] = `
+<View
+  backgroundColor={null}
+  marginBottom={0}
+  marginLeft={0}
+  marginRight={0}
+  marginTop={0}
+  pointerEvents="auto"
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 5,
+        "flexDirection": "row",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+        "position": "relative",
+      },
+    ]
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "flexBasis": 0,
+        "flexDirection": "column",
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "opacity": 1,
+        "paddingBottom": 5,
+        "paddingTop": 5,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "paddingLeft": 10,
+            "paddingRight": 5,
+            "paddingTop": 5,
+          },
+        ]
+      }
+    >
+      <Text
+        hasBackgroundColor={false}
+        style={
+          Array [
+            Object {
+              "color": "#3C3C3C",
+              "fontFamily": "Proxima-Bold",
+              "fontSize": 16,
+              "fontWeight": "500",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "paddingBottom": 10,
+            "paddingLeft": 10,
+            "paddingRight": 50,
+            "paddingTop": 10,
+          },
+        ]
+      }
+    >
+      <Text
+        hasBackgroundColor={false}
+        style={
+          Array [
+            Object {
+              "color": "#515151",
+              "fontFamily": "Proxima-Semibold",
+              "fontSize": 12,
+              "fontWeight": "400",
+            },
+          ]
+        }
+      >
+        [missing "en.components.residueCard.amount" translation]
+      </Text>
+      <Text
+        hasBackgroundColor={false}
+        style={
+          Array [
+            Object {
+              "color": "#515151",
+              "fontFamily": "Proxima-Semibold",
+              "fontSize": 12,
+              "fontWeight": "400",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderBottomRightRadius": 5,
+          "borderTopRightRadius": 5,
+          "flexDirection": "row",
+          "paddingRight": 10,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+        ]
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F91E1E",
+            "borderBottomLeftRadius": 5,
+            "borderTopLeftRadius": 5,
+            "justifyContent": "center",
+            "maxHeight": 60,
+            "opacity": 1,
+            "width": 30,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#FFFFFF",
+                "fontSize": 15,
+              },
+              Array [
+                Object {},
+              ],
+              Object {
+                "fontFamily": "Feather",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+      <TextInput
+        allowFontScaling={true}
+        keyboardType="decimal-pad"
+        onChangeText={[Function]}
+        rejectResponderTermination={true}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#F5F4F4",
+              "color": "#3C3C3C",
+              "maxHeight": 60,
+              "paddingBottom": 5,
+              "paddingLeft": 5,
+              "paddingRight": 5,
+              "paddingTop": 5,
+            },
+          ]
+        }
+        underlineColorAndroid="transparent"
+        value=""
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#F5F4F4",
+              "justifyContent": "center",
+              "paddingRight": 2,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#515151",
+                "fontFamily": "Proxima-Semibold",
+                "fontSize": 12,
+                "fontWeight": "400",
+              },
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#56AA69",
+            "borderBottomRightRadius": 5,
+            "borderTopRightRadius": 5,
+            "justifyContent": "center",
+            "maxHeight": 60,
+            "opacity": 1,
+            "width": 30,
+          }
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#FFFFFF",
+                "fontSize": 15,
+              },
+              Array [
+                Object {},
+              ],
+              Object {
+                "fontFamily": "Feather",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

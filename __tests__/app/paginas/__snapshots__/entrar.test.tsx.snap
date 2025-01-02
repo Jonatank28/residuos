@@ -1,0 +1,452 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TelaEntrar /> matches last snapshot 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#56AA69",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+      },
+    ]
+  }
+>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "padding": 20,
+      }
+    }
+    showsVerticalScrollIndicator={false}
+    style={
+      Array [
+        Object {},
+      ]
+    }
+    vertical={true}
+  >
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "paddingBottom": 30,
+              "paddingTop": 100,
+            },
+          ]
+        }
+      >
+        <Image
+          resizeMode="contain"
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 120,
+                "width": 120,
+              },
+            ]
+          }
+        />
+      </View>
+      <View
+        style={
+          Array [
+            Object {},
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "marginBottom": 20,
+              },
+            ]
+          }
+        >
+          <View
+            borderLeftDown={5}
+            borderLeftUp={5}
+            borderRightDown={5}
+            borderRightUp={5}
+            marginBottom={0}
+            marginLeft={0}
+            marginRight={0}
+            marginTop={0}
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomLeftRadius": 5,
+                  "borderBottomRightRadius": 5,
+                  "borderColor": "#F91E1E",
+                  "borderTopLeftRadius": 5,
+                  "borderTopRightRadius": 5,
+                  "borderWidth": 0,
+                  "flexBasis": 0,
+                  "flexDirection": "row",
+                  "flexGrow": 1,
+                  "flexShrink": 1,
+                  "justifyContent": "center",
+                  "marginBottom": 0,
+                  "marginLeft": 0,
+                  "marginRight": 0,
+                  "marginTop": 0,
+                  "minHeight": 50,
+                  "paddingLeft": 10,
+                },
+              ]
+            }
+            temErro={false}
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#E2E2E2",
+                    "fontSize": 20,
+                  },
+                  Array [
+                    Object {},
+                  ],
+                  Object {
+                    "fontFamily": "Feather",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+            <TextInput
+              allowFontScaling={true}
+              autoCapitalize="none"
+              autoCorrect={false}
+              editable={true}
+              keyboardType="default"
+              onChangeText={[Function]}
+              placeholder="[missing \\"en.screens.login.user\\" translation]"
+              placeholderTextColor="#B7BCC3"
+              rejectResponderTermination={true}
+              secureTextEntry={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#3C3C3C",
+                    "flexBasis": 0,
+                    "flexGrow": 1,
+                    "flexShrink": 1,
+                    "height": 40,
+                    "paddingLeft": 10,
+                    "width": "100%",
+                  },
+                ]
+              }
+              underlineColorAndroid="transparent"
+            />
+          </View>
+        </View>
+        <View
+          marginBottom={40}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "marginBottom": 40,
+              },
+            ]
+          }
+        >
+          <View
+            borderLeftDown={5}
+            borderLeftUp={5}
+            borderRightDown={5}
+            borderRightUp={5}
+            marginBottom={0}
+            marginLeft={0}
+            marginRight={0}
+            marginTop={0}
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomLeftRadius": 5,
+                  "borderBottomRightRadius": 5,
+                  "borderColor": "#F91E1E",
+                  "borderTopLeftRadius": 5,
+                  "borderTopRightRadius": 5,
+                  "borderWidth": 0,
+                  "flexBasis": 0,
+                  "flexDirection": "row",
+                  "flexGrow": 1,
+                  "flexShrink": 1,
+                  "justifyContent": "center",
+                  "marginBottom": 0,
+                  "marginLeft": 0,
+                  "marginRight": 0,
+                  "marginTop": 0,
+                  "minHeight": 50,
+                  "paddingLeft": 10,
+                },
+              ]
+            }
+            temErro={false}
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#E2E2E2",
+                    "fontSize": 20,
+                  },
+                  Array [
+                    Object {},
+                  ],
+                  Object {
+                    "fontFamily": "Feather",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+            <TextInput
+              allowFontScaling={true}
+              autoCorrect={false}
+              editable={true}
+              keyboardType="default"
+              onChangeText={[Function]}
+              placeholder="[missing \\"en.screens.login.password\\" translation]"
+              placeholderTextColor="#B7BCC3"
+              rejectResponderTermination={true}
+              secureTextEntry={true}
+              style={
+                Array [
+                  Object {
+                    "color": "#3C3C3C",
+                    "flexBasis": 0,
+                    "flexGrow": 1,
+                    "flexShrink": 1,
+                    "height": 40,
+                    "paddingLeft": 10,
+                    "width": "100%",
+                  },
+                ]
+              }
+              underlineColorAndroid="transparent"
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "height": 50,
+                "width": "100%",
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#2A9F7F",
+                "borderRadius": 5,
+                "flexBasis": 0,
+                "flexGrow": 1,
+                "flexShrink": 1,
+                "justifyContent": "center",
+                "minHeight": 50,
+                "opacity": 1,
+                "position": "relative",
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontSize": 25,
+                  },
+                  Array [
+                    Object {
+                      "left": 20,
+                      "position": "absolute",
+                      "top": 10,
+                    },
+                  ],
+                  Object {
+                    "fontFamily": "Feather",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontFamily": "Proxima-Bold",
+                    "fontSize": 16,
+                    "fontWeight": "500",
+                  },
+                ]
+              }
+              textColor="#FFFFFF"
+            >
+              [missing "en.screens.login.login" translation]
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+            },
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "borderRadius": 10,
+              "justifyContent": "center",
+              "marginTop": 20,
+              "opacity": 1,
+              "paddingBottom": 12,
+              "paddingLeft": 12,
+              "paddingRight": 12,
+              "paddingTop": 12,
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontSize": 25,
+                },
+                Array [
+                  Object {},
+                ],
+                Object {
+                  "fontFamily": "Feather",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "bottom": 0,
+          "justifyContent": "center",
+          "position": "absolute",
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "Proxima-Semibold",
+            "fontSize": 12,
+            "fontWeight": "400",
+          },
+        ]
+      }
+    >
+      [missing "en.developedBy" translation]
+    </Text>
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {},
+          ]
+        }
+      >
+        <Image
+          resizeMode="contain"
+          source={1}
+          style={
+            Array [
+              Object {
+                "maxHeight": 50,
+                "maxWidth": 200,
+              },
+            ]
+          }
+        />
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

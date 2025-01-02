@@ -1,0 +1,12 @@
+export const optionsChecklist = {
+  INICIAR: 'AO_INICIAR_COLETA',
+  FINALIZAR: 'AO_FINALIZAR_COLETA',
+};
+
+export const tiposExclusaoOS = {
+  NAO_FATURADA: 'NAO_FATURADA',
+  SINCRONIZA: 'EXC_SINCRONIZA',
+  MANUAL: 'VOLTOU_MANUAL',
+  EXC_OS: 'EXC_OS',
+  EXC_GERENCIADOR: 'EXC_GERENCIADOR',
+};

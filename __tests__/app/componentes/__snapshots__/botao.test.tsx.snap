@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Botao /> matches last snapshot 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#2A9F7F",
+      "borderRadius": 5,
+      "flexBasis": 0,
+      "flexGrow": 1,
+      "flexShrink": 1,
+      "justifyContent": "center",
+      "minHeight": 50,
+      "opacity": 1,
+      "position": "relative",
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#3C3C3C",
+          "fontFamily": "Proxima-Bold",
+          "fontSize": 16,
+          "fontWeight": "500",
+        },
+      ]
+    }
+  >
+    test
+  </Text>
+</View>
+`;

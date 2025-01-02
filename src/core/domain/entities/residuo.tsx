@@ -1,0 +1,44 @@
+import { IPhoto } from 'vision-common';
+import { IImobilizado } from './imobilizado';
+
+export interface IResiduo {
+  id?: number;
+  codigo?: number;
+  codigoVinculo?: string;
+  codigoHashResiduo?: string;
+  descricao?: string;
+  unidade?: string;
+  cor?: string;
+  codigoIDResiduo?: number;
+  codigoServico?: number;
+  codigoContrato?: number;
+  codigoCliente?: number;
+  quantidade?: string;
+  pesoBruto?: string;
+  codigoImobilizadoReal?: string | number;
+  subGrupo?: string;
+  observacao?: string;
+  classificacao?: number;
+  valorUnitario?: number;
+  naoConforme?: boolean;
+  xResiduo?: boolean;
+  excesso?: boolean;
+  xExigeInteiro?: boolean;
+  codigoIbama?: string;
+  codigoEstadoFisico?: number;
+  codigoSubGrupo?: number;
+  codigoUnidade?: number;
+  codigoAcondicionamento?: number;
+  codigoFormaTratamento?: number;
+  fotos?: IPhoto[];
+  residuosSecundarios?: IResiduo[];
+  codigoImobilizadoGenerico?: number;
+  xImobilizadoGenerico?: boolean;
+  xColetarSomenteComEquipamento?: boolean;
+  codigoIDResiduoGenerico?: number;
+  tara?: number;
+  cubagem?: number;
+  preCadastroReferencia?: boolean;
+  imobilizado?: IImobilizado;
+  pesoFinal?: number;
+}

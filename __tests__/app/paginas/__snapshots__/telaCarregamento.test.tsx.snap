@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TelaCarregamento /> matches last snapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#56AA69",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "justifyContent": "space-between",
+        "paddingBottom": 20,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "justifyContent": "center",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Image
+        resizeMode="contain"
+        source={1}
+        style={
+          Array [
+            Object {
+              "height": 120,
+              "width": 120,
+            },
+          ]
+        }
+      />
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "Proxima-Semibold",
+            "fontSize": 14.5,
+            "fontWeight": "400",
+          },
+        ]
+      }
+    >
+      [missing "en.loading" translation]
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "paddingBottom": 5,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "Proxima-Semibold",
+            "fontSize": 12,
+            "fontWeight": "400",
+          },
+        ]
+      }
+    >
+      [missing "en.developedBy" translation]
+    </Text>
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Image
+        resizeMode="contain"
+        source={1}
+        style={
+          Array [
+            Object {
+              "height": 50,
+              "width": 200,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

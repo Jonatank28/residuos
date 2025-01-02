@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TelaMotivos /> matches last snapshot 1`] = `
+Array [
+  <View
+    hasBorderBottom={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#56AA69",
+          "borderBottomColor": "#F5F4F4",
+          "borderBottomWidth": 0,
+          "flexDirection": "row",
+          "paddingBottom": 10,
+          "paddingLeft": 30,
+          "paddingRight": 30,
+          "paddingTop": 20,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+          },
+        ]
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 25,
+            },
+            Array [
+              Object {},
+            ],
+            Object {
+              "fontFamily": "Feather",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "Proxima-Bold",
+            "fontSize": 16,
+            "fontWeight": "500",
+          },
+        ]
+      }
+    >
+      [missing "en.screens.reasons.title" translation]
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexDirection": "row-reverse",
+            "flexGrow": 1,
+            "flexShrink": 1,
+          },
+        ]
+      }
+    />
+  </View>,
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F5F4F4",
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "justifyContent": "center",
+            },
+          ]
+        }
+      >
+        <Text
+          allowFontScaling={false}
+          style={
+            Array [
+              Object {
+                "color": "#E2E2E2",
+                "fontSize": 50,
+              },
+              Array [
+                Object {},
+              ],
+              Object {
+                "fontFamily": "Feather",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+              Object {},
+            ]
+          }
+        >
+          
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "marginBottom": 20,
+                "marginTop": 20,
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#3C3C3C",
+                  "fontFamily": "Proxima-Bold",
+                  "fontSize": 16,
+                  "fontWeight": "500",
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            [missing "en.screens.reasons.notFound" translation]
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>,
+]
+`;

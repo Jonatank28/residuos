@@ -1,0 +1,827 @@
+{
+  "developedBy": "Developed by",
+  "loading": "Loading...",
+  "logof": "Are you sure you want to quit?",
+  "appVersion": "APP %{version}",
+  "restVersion": "REST %{version}",
+  "noConnection": "Check your internet connection",
+  "serverAlert": "Don't forget to configure the server",
+  "notInformed": "Not Informed",
+  "locationTask": {
+    "title": "Active Sharing",
+    "body": "You are sharing your current location"
+  },
+  "updates": {
+    "title": "Attention",
+    "downloadSuccess": "Downloaded successfully! Confirm to start installation",
+    "hasUpdates": "New update available! Do you want to update now?",
+    "updating": "Downloading updates...",
+    "hasErrorUpdated": "Unstable internet network, therefore it was not possible to download. Do you want to try again?",
+    "buttons": {
+      "ok": "OK",
+      "no": "No",
+      "later": "Later",
+      "update": "Update",
+      "updateAgain": "Try again",
+      "wait": "Hold"
+    },
+    "errors": {
+      "checkUpdatesError": "There was an error checking for the latest updates",
+      "updateNotFound": "Update not found on server, please try again later",
+      "updateError": "There was an error downloading the update",
+      "updateInstallError": "There was an error opening the update"
+    }
+  },
+  "quiz": {
+    "invalidCode": "Invalid questionnaire code",
+    "questions": {
+      "invalidQuestion": "Invalid question",
+      "questionsRequired": "You must answer all questions",
+      "next": "Advance",
+      "record": "Record",
+      "observations": "Comments",
+      "addPhotos": "Add photos",
+      "notFound": "No questions found"
+    },
+    "packaging": {
+      "title": "Packaging",
+      "notFound": "No packaging found",
+      "button": "Advance"
+    },
+    "declaration": {
+      "title": "Declaration",
+      "notFound": "No declaration found",
+      "boardError": "Check the board and try again",
+      "button": "To sign"
+    }
+  },
+  "printer": {
+    "os": {
+      "title": "OS ticket %{os}",
+      "clientDetails": {
+        "title": "Customer Details",
+        "reason": "Reason",
+        "cnpj": "CNPJ",
+        "contact": "Contact",
+        "address": "Address"
+      },
+      "carrierDetails": {
+        "title": "Carrier Details",
+        "board": "Board",
+        "driver": "Driver"
+      },
+      "osDetails": {
+        "title": "Collection Details",
+        "osCode": "OS code",
+        "clientCode": "Customer Code",
+        "osDate": "Collection Date/Time"
+      },
+      "osWastes": {
+        "title": "Waste from Collection",
+        "name": "Name",
+        "amount": "Amount",
+        "unity": "Unit",
+        "noWaste": "Collection has no waste"
+      },
+      "responsibleDetails": {
+        "title": "Responsible Details",
+        "name": "Name",
+        "function": "Occupation",
+        "cpfcnpj": "CPF/CNPJ"
+      },
+      "observation": "Comments:"
+    }
+  },
+  "components": {
+    "signature": {
+      "confirm": "Confirm",
+      "clean": "Clean",
+      "refuseSignature": "Subscription Refusal",
+      "description": "Swipe to sign",
+      "collectSuccess": "Collection sent successfully!",
+      "collectLocal": "Collection recorded successfully!",
+      "collectHistoryLocal": "OS added to history locally successfully!",
+      "inspectionSuccess": "Inspection form successfully answered!",
+      "requiredSignature": "You must sign before",
+      "requiredScreen": "You must enter a screen to return"
+    },
+    "addPhoto": {
+      "max": "Maximum limit of added photos",
+      "defaultMessage": "Take a picture"
+    },
+    "camera": {
+      "likePhoto": "Did you like the photo?",
+      "wait": "Wait, adjusting image...",
+      "takeAgain": "Take another",
+      "confirm": "Confirm",
+      "loadingData": "Adjusting image...",
+      "noPermission": "No permission to access camera",
+      "permissionError": "There was an error requesting permission for camera",
+      "permissionMessage": "We need permission to access device camera",
+      "permissionTitle": "Permission to use camera"
+    },
+    "syncronization": {
+      "sendData": "Sending data...",
+      "getData": "Getting data...",
+      "writeData": "Writing data..."
+    },
+    "collectCard": {
+      "collect": "Collect",
+      "delivery": "Delivery",
+      "excluded": "Excluded",
+      "pendingOS": "Pending submission",
+      "mobileOrigin": "Mobile Origin",
+      "osPendingShow": "OS collection %{os} not done yet",
+      "scripting": "Scripting: %{code} - Point: %{point}",
+      "osOK": "Delivery available",
+      "osCancel": "Collection canceled at Controller",
+      "osDeleted": "Collection deleted in Controller",
+      "sentOS": "Collection sent",
+      "OS": "OS ",
+      "work": "Collect point:",
+      "address": "Address:",
+      "reason": "Reason:",
+      "fantasia": "Fantasy:"
+    },
+    "containerCard": {
+      "placementDate": "Placement Date:",
+      "withdrawalDate": "Date of withdrawal:",
+      "driveCode": "Movement Code:"
+    },
+    "equipmentCard": {
+      "placementDate": "Placement Date:",
+      "driveCode": "Movement Code:",
+      "replace": "To replace",
+      "remove": "To remove"
+    },
+    "residueCard": {
+      "double": "Double",
+      "amount": "Approx Quantity. %{amount} (%{UN})"
+    },
+    "question": {
+      "yes": "Meets",
+      "no": "Not attend",
+      "NA": "N / D"
+    },
+    "scanner": {
+      "scanOK": "Scanning done successfully!",
+      "scanAgain": "Scan other",
+      "confirm": "Confirm",
+      "noPermission": "No permission to access camera",
+      "permissionError": "An error occurred when requesting permission for camera"
+    }
+  },
+  "screens": {
+    "login": {
+      "user": "User",
+      "password": "Password",
+      "login": "Login"
+    },
+    "initialSetting": {
+      "title": "Initial setting",
+      "settingOK": "Configuration changed successfully!",
+      "server": "Server",
+      "route": "Route",
+      "placeholdIP": "Enter the server IP",
+      "placeholdRoute": "Enter the server route",
+      "button": "To set up",
+      "restorationMessage": "Are you sure you want to restore the database?",
+      "restorationError": "An error occurred while performing the restore, please try again later",
+      "restorationSuccess": "Restoration performed successfully! The app will restarted"
+    },
+    "addMtr": {
+      "title": "Add MTR",
+      "mtr": "MTR",
+      "mtrInfo": "Inform the MTR",
+      "mtrQR": "MTR Barcode",
+      "mtrDate": "MTR Issue Date",
+      "add": "To add",
+      "mtrQRPlaceholder": "Add MTR by scan",
+      "calendarButton": "Done",
+      "lettersInfo": "The MTR entered must contain only numbers",
+      "screenError": "An error occurred with the screen to return",
+      "minMtr": "You must type or scan at least 1 MTR",
+      "qrCodeMessage": "Center camera to scan"
+    },
+    "printers": {
+      "title": "Bluetooth printers",
+      "notFound": "No printer found",
+      "print": {
+        "OS": "OS ticket: %{OS} \n",
+        "date": "OS date: %{date} \n",
+        "client": {
+          "title": "Customer Details \n",
+          "reason": "Reason: %{reason} \n",
+          "cnpj": "CNPJ: %{cnpj} \n",
+          "contact": "Contact: %{contact} \n",
+          "responsible": "Responsible: %{responsible} \n",
+          "function": "Function: %{function} \n",
+          "cpf": "CPF: %{cpf} \n"
+        },
+        "driver": {
+          "title": "Carrier Details \n",
+          "board": "Board: %{board} \n",
+          "userName": "Driver: %{userName} \n"
+        },
+        "residues": {
+          "title": "Waste \n",
+          "description": "Description: %{description} \n",
+          "amount": "Amount: %{amount} - %{unit} \n\n",
+          "notFound": "Collection has no waste \n"
+        },
+        "observations": "Comments: %{observations} \n"
+      },
+      "exceptions": {
+        "checkPrinters": "An error occurred while checking the printers",
+        "activeBluetooth": "Activate bluetooth to continue",
+        "invalidPrint": "Invalid printer selected",
+        "connectError": "An error occurred while trying to connect to %{name}"
+      }
+    },
+    "stateMtr": {
+      "title": "MTR States",
+      "sinir": "SINIR",
+      "notFound": "No status found",
+      "screenError": "An error occurred with the screen to return"
+    },
+    "addRegions": {
+      "title": "Add Regions",
+      "board": "Board",
+      "selectBoard": "Select a Plate",
+      "addRegionsContainer": "Add Regions",
+      "placeholderRegions": "Add some regions",
+      "settingOK": "Changes set successfully!",
+      "requiredBoard": "You must select a board",
+      "requiredRegions": "You must select at least 1 region",
+      "regionExist": "%{region} has already been added, delete or choose another",
+      "button": "Record"
+    },
+    "changeBoard": {
+      "title": "Change Plate",
+      "search": "Search by license plate",
+      "chageSuccess": "Successfully altered board!",
+      "changeError": "There was an error selecting the board",
+      "notFound": "No board found"
+    },
+    "changePassword": {
+      "title": "Change Password",
+      "chageSuccess": "Password changed successfully!",
+      "form": {
+        "currentPassword": "Current password",
+        "currentPasswordPlaceholder": "Enter current password",
+        "newPassword": "New password",
+        "newPasswordPlaceholder": "Enter the new password",
+        "repeatPassword": "repeat password",
+        "repeatPasswordPlaceholder": "Repeat the new password"
+      },
+      "button": "Change"
+    },
+    "backup": {
+      "title": "Do Backup",
+      "server": "Server",
+      "password": "Password",
+      "passwordPlaceholder": "Enter the password",
+      "serverPlaceholder": "Inform the server",
+      "backupSuccess": "Backup performed successfully!",
+      "confirmData": "Check the above data and try again",
+      "noPermission": "The password entered is incorrect",
+      "noDatabase": "Database does not exist on device",
+      "noShareService": "Service unavailable on device",
+      "button": "Backup"
+    },
+    "clientContainer": {
+      "title": "Containers",
+      "localOnly": "Display only in place",
+      "lastDays": "last 60 days",
+      "notFound": "No containers found"
+    },
+    "clientDetails": {
+      "title": "Customer Details",
+      "client": "Client",
+      "containers": "Containers",
+      "viewClient": "View Customer",
+      "checkIn": "CheckIn",
+      "checkOut": "CheckOut",
+      "clientAddress": "Customer Address",
+      "addLocalization": "Add Location",
+      "checkInExist": "There is already a customer with active check-in",
+      "clientInvalidCode": "Customer code is invalid",
+      "localizationSuccess": "Location updated successfully!",
+      "checkInSuccess": "CheckIn successfully completed!",
+      "checkOutSuccess": "CheckOut successful!",
+      "confirmLocalization": "Are you sure you want to add the location to the client?"
+    },
+    "clients": {
+      "title": "Customers",
+      "search": "Search",
+      "notFound": "No customers found",
+      "selectClientError": "There was an error selecting the customer"
+    },
+    "collectDetails": {
+      "locationSharingStopMessage": "Location sharing disabled",
+      "locationSharingStartMessage": "Location sharing enabled",
+      "locationSharingStart": "Share Location",
+      "locationSharingStop": "Stop Sharing",
+      "locationSharingExist": "Another collection is with active sharing",
+      "reasonRequired": "You must select a reason",
+      "invalidClient": "Invalid customer",
+      "phoneInvalid": "Invalid phone number, please try again later",
+      "checkInSuccess": "CheckIn successfully completed!",
+      "checkOutSuccess": "CheckOut successful!",
+      "draftMessage": "A draft was found, do you want to use it?",
+      "callCustomerMessage": "Are you sure you want to call the customer?",
+      "callCustomer": "Call Customer",
+      "notCollected": "Not Collected",
+      "selectReason": "Select a Reason",
+      "addstop": "Add Stop",
+      "observation": "Comments",
+      "address": "Address",
+      "responsible": "Responsible",
+      "work": "Collect point: ",
+      "location": {
+        "title": "Choose where you want to open the collection:",
+        "maps": "open in maps",
+        "waze": "Open in Waze"
+      },
+      "contract": "Contract: ",
+      "checkIn": "CheckIn",
+      "checkOut": "CheckOut",
+      "notFound": "Collection not found",
+      "checkInExist": "There is already a customer with active check-in",
+      "button": "Continue"
+    },
+    "collectDetailsLocal": {
+      "title": "History Collection Details",
+      "invalidClient": "Invalid customer",
+      "work": "Collect point",
+      "sinir": "SINIR",
+      "mtrsDetails": "MTR's",
+      "contract": "Contract",
+      "photos": "Collect Photos",
+      "responsibleInfo": "Responsible Information",
+      "responsibleName": "Name of Responsible",
+      "responsibleFunction": "Responsible Role",
+      "responsibleEmail": "Responsible's Email",
+      "reasonDetails": "Reason Details",
+      "reason": "Reason",
+      "responsibleDocument": "Responsible CPF/CNPJ",
+      "residuesList": "Waste List",
+      "equipamentList": "Equipment list",
+      "additionalInfo": "Additional Information",
+      "observation": "Comments",
+      "mtrOnline": "MTR",
+      "board": "Board",
+      "collectAddress": "Collection address",
+      "mtr": {
+        "alertPDFAux": "Do you want to generate the Waste Transport Auxiliary Document?",
+        "syncSuccess": "MTR's synced successfully!",
+        "message": "Select any MTR to view the PDF",
+        "notInformed": "Number not informed",
+        "mtrOnline": "Generated online",
+        "mtrOffline": "Auxiliary Document",
+        "errors": {
+          "residuesLength": "One or more waste has incorrect links, check with the responsible sector",
+          "defaultError": "There was an error generating the PDF, check the configured data",
+          "downloadAlert": "Do you want to download the Generated MTR's?",
+          "noConnection": "Without internet connection, try to generate a Waste Transport Auxiliary Document",
+          "configurationError": "The generator data was not configured correctly in the Vision Controller, check with the responsible sector",
+          "conveyorError": "Conveyor data has not been configured correctly in Vision Controller, check with the responsible sector",
+          "addresseeError": "Recipient data was not configured correctly in Vision Controller, check with the responsible sector",
+          "residuesError": "No residue available for MTR printing, check with the responsible sector"
+        }
+      }
+    },
+    "collectEquipament": {
+      "title": "Equipment list",
+      "removeEquipamentSuccess": "Equipment successfully removed!",
+      "selectEquipamentError": "An error occurred when selecting the equipment",
+      "invalidCode": "Invalid equipment code",
+      "scanMessage": "Center to scan and remove equipment",
+      "notFoundEquipament": "Equipment not found",
+      "replaceMessage": "Old equipment will be removed, do you want to proceed with the replacement?",
+      "removeEquipamentMessage": "Are you sure you want to remove the equipment?",
+      "removeForbidden": "You cannot remove equipment in the same OS that was added",
+      "remove": "To remove",
+      "notFound": "No equipment found",
+      "add": "Add",
+      "continue": "Continue"
+    },
+    "collectResidues": {
+      "title": "Waste List",
+      "attention": "Attention:",
+      "attentionMessage": "The collection has duplicate waste",
+      "residueRequired": "You must add some residue to continue",
+      "residuesValidate": "The amount of waste entered is invalid",
+      "notFound": "No waste found",
+      "signature": "Signature",
+      "deleteConfirm": "Are you sure you want to delete this residue?",
+      "amountMoreError": "An error occurred while trying to add the amount of waste",
+      "amountDimError": "An error occurred while trying to decrease the amount of waste",
+      "amountChangeError": "An error occurred while trying to change the amount of waste",
+      "add": "Add",
+      "continue": "Continue",
+      "quantityConfirmationMessage": "Are you sure you want to proceed with the amount of: %{totalResiduo} residue",
+      "pluralQuantityConfirmationMessage": "Are you sure you want to proceed with the amount of: %{totalResiduo} waste"
+    },
+    "collectFilter": {
+      "title": "Filter Collections",
+      "filters": "Filters",
+      "selectClient": "Select a Customer",
+      "selectWork": "Collection Point",
+      "screenError": "An error occurred with a screen to return",
+      "initialDate": "Initial date",
+      "endDate": "Final date",
+      "route": "Route",
+      "calendarButton": "Confirm",
+      "filterByDate": "Filter by Date",
+      "qrCodeClientMessage": "Scan the customer's QR Code to filter collections",
+      "qrCodePointMessage": "Scan the collection point QR Code to filter collections",
+      "allRoutes": "All Routes",
+      "scripting": {
+        "allScripted": "All Scripting",
+        "notScripted": "Unscripted",
+        "onlyScripted": "Scripted Only"
+      },
+      "classification": {
+        "title": "All Ratings",
+        "collect": "Collect",
+        "delivery": "Delivery"
+      },
+      "clean": "Clean",
+      "filter": "Filter"
+    },
+    "collectCheck": {
+      "title": "Responsible",
+      "responsibleName": "Name of Responsible",
+      "responsibleFunction": "Responsible Role",
+      "responsibleEmail": "Responsible's Email",
+      "responsibleDocument": "Responsible CPF/CNPJ",
+      "scanMessage": "center to scan",
+      "observation": "Observation",
+      "clientMtr": "Customer MTR",
+      "clientMtrCode": "MTR Barcode",
+      "addPhotos": "Add photos",
+      "send": "Submit",
+      "signature": "To sign",
+      "resume": "Collection Summary",
+      "mtrs": "MTR's",
+      "sinir": "SINIR",
+      "osPending": "OS %{os} must be collected first to continue",
+      "addMTR": "Add MTR",
+      "codeOSInvalid": "Invalid OS code, check and try again",
+      "collectHistoryLocal": "OS added to history locally successfully!",
+      "mtrDelete": "OS added to history locally successfully!",
+      "form": {
+        "responsibleRequired": "Responsible is mandatory",
+        "responsibleFunctionRequired": "Responsible role is mandatory",
+        "invalidEmail": "Check Email"
+      },
+      "signatureRequired": "You must sign before",
+      "collectLocallySuccess": "Locally recorded collection successfully!",
+      "collectDeleted": "OS deleted in Controller, generated new OS with data",
+      "collectCanceled": "Collection canceled in Controller, new OS generated with data",
+      "sendCollectSuccess": "Collection sent successfully!",
+      "photoRequired": "You need to add at least one photo on OS"
+    },
+    "sheduledCollections": {
+      "title": "Scheduled Collections",
+      "board": "Board:",
+      "location": {
+        "title": "Choose where you want to open the collection:",
+        "maps": "open in maps"
+      },
+      "searchCustomersWorks": "Search Clients / Works",
+      "startLocation": "Are you sure you want to start sharing?",
+      "stopLocation": "Are you sure you want to stop sharing?",
+      "synchronizeMessage": "Are you sure you want to sync all collections?",
+      "mapMessage": "Are you sure you want to open the map?",
+      "allCities": "All Cities",
+      "showMapError": "There are no collections to show on the map",
+      "immobilize": "Fixed Assets",
+      "observation": "Comments",
+      "referring": "Referent",
+      "notFound": "No collection found",
+      "totalCollect": "Collects %{page} of %{total}"
+    },
+    "settings": {
+      "title": "Settings",
+      "locallyMessageError": "You do not have access to the offline active option",
+      "collectPendent": "There are pending collections on the device, you must sync in order to continue",
+      "updateOK": "You have the latest version installed",
+      "options": {
+        "title": "Options",
+        "workOff": "Work Offline",
+        "changePassword": "Change Password",
+        "backup": "Do Backup",
+        "update": "Check updates",
+        "server": "Change Server",
+        "balance": "Change Balances",
+        "changeBoard": "Change Plate",
+        "changeRegions": "Change Regions",
+        "logof": "Get Out",
+        "usageTips": "Usage Tips App"
+      }
+    },
+    "equipamentDetailsLocal": {
+      "title": "Equipment Details",
+      "name": "Name",
+      "movementCode": "Movement Code",
+      "datePlacement": "Placement Date",
+      "withdrawalDate": "Withdrawal Date",
+      "notFound": "No equipment to display"
+    },
+    "report": {
+      "title": "Report",
+      "subtitle": "THE APP HAS UNSYNCHRONIZED DATA"
+    },
+    "residuesDetailsLocal": {
+      "title": "Waste Details",
+      "name": "Name",
+      "subgroup": "SubGroup",
+      "amount": "Amount",
+      "observation": "Observation",
+      "photos": "Photos",
+      "selectPhotoError": "There was an error selecting the photo",
+      "notFound": "No residue to display"
+    },
+    "collectHistory": {
+      "title": "Collection History",
+      "search": "Search",
+      "invalidCollectCode": "Invalid collection code",
+      "notFound": "No collection found"
+    },
+    "home": {
+      "title": "VS Waste",
+      "versionAlert": "You must update your app to continue",
+      "noOSPermission": "You do not have permission to register OS",
+      "synchronizeSuccess": "Synchronization successful!",
+      "synchronizeMessagePermission": "You cannot sync with offline option active",
+      "synchronizeMessage": "Are you sure you want to sync everything?",
+      "boardError": "An error occurred, check the vehicle's license plate and try again",
+      "options": {
+        "scheduledCollections": "Scheduled Collections",
+        "clients": "Customers",
+        "drafts": "Drafts",
+        "history": "Historic",
+        "newCollect": "New Collection",
+        "settings": "Settings",
+        "synchronize": "Synchronize",
+        "report": "Report"
+      }
+    },
+    "immobilize": {
+      "title": "Fixed Assets",
+      "notFound": "No fixed assets found"
+    },
+    "equipamentList": {
+      "title": "Add Equipment",
+      "search": "Search",
+      "added": "Added",
+      "equipamentExist": "Equipment already exists in the list, choose another one",
+      "scanMessage": "Center to scan and add equipment",
+      "equipamentNotFound": "Equipment not found",
+      "equipamentReplaceSuccess": "Equipment replaced successfully!",
+      "equipamentAddSuccess": "Equipment successfully added!",
+      "selectEquipamentError": "An error occurred when selecting the equipment",
+      "notFound": "No equipment found"
+    },
+    "equipamentListLocal": {
+      "title": "Equipment list",
+      "deleted": "Withdrawn",
+      "invalidCode": "Invalid equipment code",
+      "notFound": "No equipment found"
+    },
+    "residuesList": {
+      "title": "Add Waste",
+      "search": "Search",
+      "added": "Added",
+      "double": "Double",
+      "selectResidueError": "An error occurred when selecting the residue",
+      "notFound": "No waste found"
+    },
+    "residuesListLocal": {
+      "title": "Waste List",
+      "notFound": "No waste found"
+    },
+    "reasons": {
+      "title": "Reasons",
+      "selectReasonError": "An error occurred when selecting the reason",
+      "notFound": "No reason found"
+    },
+    "addStops": {
+      "title": "Add Stops",
+      "selectReasonError": "An error occurred when adding the stop",
+      "notFound": "No stop found"
+    },
+    "newCollect": {
+      "title": "New Collection",
+      "client": "Client",
+      "work": "Collect point",
+      "workRequired": "You must select a Collect point first",
+      "notCollected": "Not Collected",
+      "reasonMessage": "Select a Reason",
+      "selectClient": "Select a Customer",
+      "selectWork": "Select a Collect point",
+      "observation": "Comments",
+      "workAddress": "Work Address",
+      "clientAddress": "Customer Address",
+      "reasonRequired": "You must select a reason",
+      "boardRequired": "Configure a board to continue",
+      "clientRequired": "You must select a customer",
+      "button": "Continue"
+    },
+    "work": {
+      "title": "Collect Points",
+      "notFound": "No Collect point found",
+      "selectWorkError": "An error occurred when selecting the Collect point"
+    },
+    "drafts": {
+      "title": "Drafts",
+      "search": "Search",
+      "OS": "OS %{os}",
+      "newCollect": "New Collection",
+      "work": "Collect point: %{work}",
+      "notFound": "No drafts found"
+    },
+    "draftsDetails": {
+      "title": "Draft Details",
+      "deleteMessage": "Are you sure you want to delete the draft?",
+      "toGoCollect": "Go to Collection",
+      "notFound": "Draft not found",
+      "deleted": "Withdrawn",
+      "invalidCode": "Invalid draft code",
+      "deleteDraftSuccess": "Draft deleted successfully!",
+      "clientDetails": {
+        "title": "Customer Details",
+        "name": "Name",
+        "phone": "Phone"
+      },
+      "workDetails": {
+        "title": "Collect point Details",
+        "work": "Collect point"
+      },
+      "responsibleDetails": {
+        "title": "Responsible Details",
+        "name": "Name of Responsible",
+        "occupation": "Responsible Role",
+        "email": "Responsible's Email"
+      },
+      "mtrsDetails": {
+        "title": "MTR's Details"
+      },
+      "reasonDetails": {
+        "title": "Details Reason",
+        "name": "Reason",
+        "observation": "Comments"
+      },
+      "residuesDetails": {
+        "title": "Waste",
+        "amount": "Amount:",
+        "subGroup": "SubGroup:",
+        "observation": "Observation:",
+        "excess": "Excess:",
+        "noConform": "Non Compliant:",
+        "hasPhotos": "Have photos:",
+        "classification": "Classification:",
+        "yes": "Yes",
+        "no": "No"
+      },
+      "equipmentDetails": {
+        "title": "Equipment"
+      }
+    },
+    "regions": {
+      "title": "Regions",
+      "search": "Search",
+      "selectRegionError": "An error occurred when selecting the region",
+      "notFound": "No regions found"
+    },
+    "residue": {
+      "titleEdit": "Edit Waste",
+      "titleAdd": "Add Waste",
+      "residueInfo": "Waste Information",
+      "residueMessage": "Select a Residue",
+      "amount": "Amount",
+      "observation": "Observation",
+      "excess": "Excess",
+      "notAccording": "Non Compliant",
+      "addPhotos": "Add photos",
+      "edit": "Edit",
+      "add": "Add",
+      "save": "Save",
+      "added": "Added",
+      "double": "Double",
+      "attention": "Attention:",
+      "attentionMessage": "The selected residue is duplicated in this collection",
+      "amountRequired": "The amount entered is invalid",
+      "amountInteger": "You must enter an entire amount"
+    },
+    "collectResume": {
+      "title": "Collection Summary",
+      "signatureRequired": "Required to sign before",
+      "collectSuccess": "Collection sent successfully!",
+      "residueList": "Waste List",
+      "equipamentList": "Equipment list",
+      "work": "Collect point: ",
+      "print": "Print",
+      "contract": "Contract: ",
+      "signature": "To sign",
+      "send": "Submit",
+      "residuesList": "Waste List",
+      "equipmentList": "Equipment list",
+      "photoRequired": "You need to add at least one photo on OS",
+      "printOS": "OS printing",
+      "wifi": "Wi-Fi",
+      "bluetooth": "Bluetooth"
+    },
+    "checklist": {
+      "title": "Checklist",
+      "observation": "Comments",
+      "button": "Continue",
+      "questionsNotFound": "Group does not have questions registered",
+      "questionsRequired": "You must answer all mandatory questions",
+      "invalidQuestion": "Invalid question"
+    },
+    "refuseSignature": {
+      "title": "Subscription Refusal",
+      "refuseSignatureDetails": "Refusal Details",
+      "responsible": {
+        "title": "Responsible",
+        "placeholder": "Inform the responsible",
+        "required": "You must inform the responsible"
+      },
+      "reason": {
+        "title": "Reason",
+        "placeholder": "Inform the reason",
+        "required": "You must inform the reason for the refusal"
+      },
+      "button": "Finish"
+    }
+  },
+  "alerts": {
+    "attention": "Attention",
+    "stay": "Stay",
+    "yes": "Yes",
+    "no": "No",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "ok": "Ok",
+    "logof": "Logout"
+  },
+  "yup": {
+    "vericationError": "Check the fields and try again",
+    "cpf": "Check the CPF/CNPJ",
+    "required": {
+      "user": "User is mandatory",
+      "password": "Password is required",
+      "currentpassword": "Current password is required",
+      "newPassword": "New password is mandatory",
+      "minimumPassword": "Password must be at least 4 characters",
+      "passwordEquals": "Passwords must match",
+      "repeatPassword": "Repeat the new password"
+    }
+  },
+  "exceptions": {
+    "500": "%{code} - A problem occurred while communicating with the server, please try again later",
+    "501": "%{code} - Method not implemented",
+    "502": "%{code} - The server returned an invalid response",
+    "503": "%{code} - The server is under maintenance or overloaded",
+    "504": "%{code} - Server returned operation timeout",
+    "505": "%{code} - The HTTP version used in the request is not supported by the server",
+    "506": "%{code} - The server has an internal configuration error",
+    "507": "%{code} - The method could not be executed on the resource because the server cannot store the representation required to successfully complete the request",
+    "508": "%{code} - The server detected an infinite loop while processing the request",
+    "510": "%{code} - Additional extensions to the request are required for the server to fulfill it",
+    "511": "%{code} - Authentication required to gain access",
+    "badRequest": "An error occurred, check the data and try again",
+    "invalidLogin": "Incorrect username or password",
+    "noContent": "No content",
+    "internet": "Fixing a server connection error",
+    "locationError": "Error getting location, check settings",
+    "differentMobile": "Cannot sync with different cell phones",
+    "notAuthorized": "Unauthorized user, activate and try again later",
+    "notFound": "Not found",
+    "forbidden": "You do not have permission to access some functions",
+    "userIsBanned": "User temporarily banned, contact support",
+    "noApiConnection": "Check your internet connection",
+    "apiError": "API connection error",
+    "unknonwApi": "%{code} - The server encountered a situation it does not know how to deal with",
+    "customs": {
+      "sql": {
+        "sqlExecute": "Error trying to run SQL locally",
+        "sqlCreate": "Error trying to create %{table} table locally",
+        "sqlDelete": "Error trying to delete a record locally",
+        "sqlInsert": "Error trying to insert a record locally",
+        "sqlUpdate": "Error trying to update a record locally",
+        "sqlEmptyArray": "Error trying to insert an empty list locally",
+        "asyncCallbackError": "Error trying to execute callback locally"
+      },
+      "notFoundMobile": "Device not found, try again or contact the responsible person",
+      "freeSpaceLimit": "Device storage is close to limit, check space in use",
+      "lockSpaceMessage": "The device's storage has exceeded the maximum limit necessary for the application to work correctly, it will not be allowed to continue until more space is freed up for security reasons",
+      "currentPassword": "Current password is not valid",
+      "checkOut": "Customer does not have active check-in",
+      "loginExist": "This account is already logged in on another device"
+    }
+  }
+}

@@ -1,0 +1,937 @@
+{
+  "developedBy": "Desenvolvido por",
+  "loading": "Carregando...",
+  "logof": "Tem certeza que deseja sair?",
+  "appVersion": "APP %{version}",
+  "restVersion": "REST %{version}",
+  "noConnection": "Verifique sua conexão com a internet",
+  "serverAlert": "Não se esqueça de fazer a configuração do servidor",
+  "notInformed": "Não Informado",
+  "locationTask": {
+    "title": "Compartilhamento Ativo",
+    "body": "Você está compartilhando sua localização atual"
+  },
+  "usageTips": {
+    "title": "Atenção",
+    "subTitle": "Baixando...",
+    "message": "Realmente deseja baixar as dicas de uso?",
+    "messageSuccess": "PDF baixado com sucesso! Clique para abri-lo",
+    "downloadError": "Erro aoa tentar baixar o PDF",
+    "buttons": {
+      "ok": "OK",
+      "no": "Não",
+      "later": "Depois",
+      "download": "Baixar",
+      "downloadAgain": "Tentar Novamente",
+      "wait": "Aguarde"
+    },
+    "errors": {
+      "downloadNotFound": "PDF não foi encontrada no servidor, tente novamente mais tarde",
+      "downloadError": "Ocorreu um erro ao baixar a PDF",
+      "downloadOpenlError": "Ocorreu um erro ao abrir o PDF"
+    }
+  },
+  "updates": {
+    "title": "Atenção",
+    "downloadSuccess": "Baixado com sucesso! Confirme para iniciar a instalação",
+    "hasUpdates": "Nova atualização disponível! Deseja atualizar agora?",
+    "updating": "Baixando atualizações...",
+    "hasErrorUpdated": "Rede de internet instável, sendo assim não foi possivel efetuar o download. Deseja tentar novamente?",
+    "buttons": {
+      "ok": "OK",
+      "no": "Não",
+      "later": "Depois",
+      "update": "Atualizar",
+      "updateAgain": "Tentar Novamente",
+      "wait": "Aguarde"
+    },
+    "errors": {
+      "checkUpdatesError": "Ocorreu um erro ao verificar as atualizações mais recentes",
+      "updateNotFound": "A atualização não foi encontrada no servidor, tente novamente mais tarde",
+      "updateError": "Ocorreu um erro ao baixar a atualização",
+      "updateInstallError": "Ocorreu um erro ao abrir a atualização"
+    }
+  },
+  "quiz": {
+    "invalidCode": "Código do questionário inválido",
+    "questions": {
+      "invalidQuestion": "Pergunta inválida",
+      "questionsRequired": "Você deve responder todas as perguntas",
+      "next": "Avançar",
+      "record": "Gravar",
+      "observations": "Observações",
+      "addPhotos": "Adicionar Fotos",
+      "notFound": "Nenhuma pergunta encontrada"
+    },
+    "packaging": {
+      "title": "Embalagens",
+      "notFound": "Nenhuma embalagem encontrada",
+      "button": "Avançar"
+    },
+    "declaration": {
+      "title": "Declaração",
+      "notFound": "Nenhuma declaração encontrada",
+      "boardError": "Verifique a placa e tente novamente",
+      "button": "Assinar"
+    }
+  },
+  "printer": {
+    "os": {
+      "title": "Ticket da OS %{os}",
+      "clientDetails": {
+        "title": "Detalhes do Cliente",
+        "reason": "Razão",
+        "cnpj": "CNPJ",
+        "contact": "Contato",
+        "address": "Endereço"
+      },
+      "carrierDetails": {
+        "title": "Detalhes do Transportador",
+        "board": "Placa",
+        "driver": "Motorista"
+      },
+      "osDetails": {
+        "title": "Detalhes da Coleta",
+        "osCode": "Código da OS",
+        "clientCode": "Código do Cliente",
+        "osDate": "Data/Hora da Coleta"
+      },
+      "osWastes": {
+        "title": "Resíduos da Coleta",
+        "name": "Nome",
+        "amount": "Quantidade",
+        "unity": "Unidade",
+        "noWaste": "Coleta não possui resíduos"
+      },
+      "responsibleDetails": {
+        "title": "Detalhes do Responsável",
+        "name": "Nome",
+        "function": "Função",
+        "cpfcnpj": "CPF/CNPJ"
+      },
+      "observation": "Observações:"
+    },
+    "mtrPortal": {
+      "title": "Documento Auxiliar de Transporte de Resíduos",
+      "mtr": "<strong>MTR:</strong> %{mtr}",
+      "generatorData": {
+        "title": "Identificação do Gerador",
+        "name": "<strong>Razão Social:</strong> %{name}",
+        "document": "<strong>CPF/CNPJ:</strong> %{document}",
+        "address": "<strong>Endereço:</strong> %{address}",
+        "phone": "<strong>Telefone:</strong> %{phone}",
+        "cel": "<strong>Celular:</strong> %{cel}",
+        "city": "<strong>Município:</strong> %{city}",
+        "uf": "<strong>Estado:</strong> %{uf}",
+        "responsibleName": "<strong>Nome do Responsável pela Emissão:</strong> %{responsible}",
+        "responsiblePosition": "<strong>Cargo:</strong> %{position}",
+        "signature": "Assinatura do Responsável",
+        "signatureDate": "<strong>Data da Emissão:</strong> %{date}"
+      },
+      "conveyorData": {
+        "title": "Identificação do Transportador",
+        "name": "<strong>Razão Social:</strong> %{name}",
+        "document": "<strong>CPF/CNPJ:</strong> %{document}",
+        "address": "<strong>Endereço:</strong> %{address}",
+        "phone": "<strong>Telefone:</strong> %{phone}",
+        "cel": "<strong>Celular:</strong> %{cel}",
+        "city": "<strong>Município:</strong> %{city}",
+        "uf": "<strong>Estado:</strong> %{uf}",
+        "driverName": "<strong>Nome do Motorista:</strong><br> %{driver}",
+        "board": "<strong>Placa do Veículo:</strong><br> %{board}",
+        "signature": "Assinatura do Responsável",
+        "signatureDate": "<strong>Data do Transporte:</strong> %{date}"
+      },
+      "addresseeData": {
+        "title": "Identificação do Destinador",
+        "name": "<strong>Razão Social:</strong> %{name}",
+        "document": "<strong>CPF/CNPJ:</strong> %{document}",
+        "address": "<strong>Endereço:</strong> %{address}",
+        "phone": "<strong>Telefone:</strong> %{phone}",
+        "cel": "<strong>Celular:</strong> %{cel}",
+        "city": "<strong>Município:</strong> %{city}",
+        "uf": "<strong>Estado:</strong> %{uf}",
+        "responsibleName": "<strong>Nome do Responsável pelo Recebimento:</strong><br> %{responsible}",
+        "responsiblePosition": "<strong>Cargo:</strong> %{position}",
+        "signature": "Assinatura do Responsável",
+        "signatureDate": "<strong>Data do Recebimento:</strong> %{date}"
+      },
+      "residuesData": {
+        "title": "Identificação dos Resíduos",
+        "columns": {
+          "column1": "Item",
+          "column2": "Código Ibama e Denominação",
+          "column3": "Estado Físico",
+          "column4": "Classe",
+          "column5": "Acondicionamento",
+          "column6": "Qtde",
+          "column7": "Unidade",
+          "column8": "Tecnologia"
+        }
+      },
+      "footer": {
+        "message": "O.S: %{os}. Data de Impressão: %{date}",
+        "messageAlert": "*Este documento não é um documento fiscal e não substitui o MTR ou CDF"
+      }
+    }
+  },
+  "components": {
+    "signature": {
+      "confirm": "Confirmar",
+      "clean": "Limpar",
+      "refuseSignature": "Recusa de Assinatura",
+      "description": "Deslize o dedo para assinar",
+      "collectSuccess": "Coleta enviada com sucesso!",
+      "collectLocal": "Coleta gravada com sucesso!",
+      "collectHistoryLocal": "OS adicionada ao histórico localmente com sucesso!",
+      "inspectionSuccess": "Ficha de inspeção respondida com sucesso!",
+      "requiredSignature": "Você deve assinar antes",
+      "requiredScreen": "Você deve informar uma tela para retornar"
+    },
+    "notFound": {
+      "update": "Atualizar"
+    },
+    "addPhoto": {
+      "max": "Limite máximo de fotos adicionadas",
+      "defaultMessage": "Tire uma foto"
+    },
+    "camera": {
+      "likePhoto": "Gostou da foto?",
+      "wait": "Aguarde, ajustando imagem...",
+      "takeAgain": "Tirar Outra",
+      "confirm": "Confirmar",
+      "noPermission": "Sem permissão para acessar a camera",
+      "loadingData": "Ajustando imagem...",
+      "permissionError": "Ocorreu um erro ao requisitar a permissão para camera",
+      "permissionMessage": "Precisamos de permissão para acessar a camera do dispositivo",
+      "permissionTitle": "Permissão para usar camera"
+    },
+    "syncronization": {
+      "sendData": "Enviando dados...",
+      "getData": "Pegando dados...",
+      "writeData": "Gravando dados..."
+    },
+    "collectCard": {
+      "collect": "Coleta",
+      "delivery": "Entrega",
+      "excluded": "Excluída",
+      "pendingOS": "Envio Pendente",
+      "mobileOrigin": "Origem Mobile",
+      "osPendingShow": "Coleta da OS %{os} ainda não realizada",
+      "scripting": "Roteirização: %{code} - Ponto: %{point}",
+      "osOK": "Entrega disponível",
+      "osCancel": "Coleta cancelada no Controller",
+      "osDeleted": "Coleta excluída no Controller",
+      "sentOS": "Coleta enviada",
+      "OS": "O.S ",
+      "work": "Ponto de coleta:",
+      "address": "Endereço:",
+      "reason": "Razão:",
+      "fantasia": "Fantasia:"
+    },
+    "containerCard": {
+      "placementDate": "Data de Colocação:",
+      "withdrawalDate": "Data de Retirada:",
+      "driveCode": "Cód. Movimentação:"
+    },
+    "equipmentCard": {
+      "placementDate": "Data de Colocação:",
+      "driveCode": "Cód. Movimentação:",
+      "replace": "Substituir",
+      "remove": "Retirar"
+    },
+    "residueCard": {
+      "double": "Duplicado",
+      "amount": "Quantidade Aprox. %{amount} (%{UN})"
+    },
+    "question": {
+      "yes": "Atende",
+      "no": "Não atende",
+      "NA": "N/A"
+    },
+    "scanner": {
+      "scanOK": "Escaneamento feito com sucesso!",
+      "scanAgain": "Escanear outro",
+      "confirm": "Confirmar",
+      "noPermission": "Sem permissão para acessar a camera",
+      "permissionError": "Ocorreu um error ao requisitar permissão para camera"
+    }
+  },
+  "screens": {
+    "login": {
+      "user": "Usuário",
+      "password": "Senha",
+      "login": "Entrar"
+    },
+    "initialSetting": {
+      "title": "Configuração Inicial",
+      "settingOK": "Configuração alterada com sucesso!",
+      "server": "Servidor",
+      "route": "Rota",
+      "placeholdIP": "Informe o IP do servidor",
+      "placeholdRoute": "Informe a rota do servidor",
+      "button": "Configurar",
+      "restorationMessage": "Tem certeza que deseja fazer a restauração do banco de dados?",
+      "restorationError": "Ocorreu um erro ao realizar a restauração, tente novamente mais tarde",
+      "restorationSuccess": "Restauração realizada com sucesso! O aplicativo vai ser reiniciado"
+    },
+    "addMtr": {
+      "title": "Adicionar MTR",
+      "mtr": "MTR",
+      "mtrInfo": "Informe o MTR",
+      "mtrQR": "MTR Código de Barras",
+      "mtrQRPlaceholder": "Adicionar MTR por escaneamento",
+      "mtrDate": "Data Emissão MTR",
+      "add": "Adicionar",
+      "calendarButton": "Confirmar",
+      "lettersInfo": "O MTR informado deve conter somente números",
+      "screenError": "Ocorreu um erro com a tela para retornar",
+      "minMtr": "Você deve digitar ou escanear pelo menos 1 MTR",
+      "qrCodeMessage": "Centralize a câmera para escanear"
+    },
+    "printers": {
+      "title": "Impressoras Bluetooth",
+      "notFound": "Nenhuma impressora encontrada",
+      "print": {
+        "OS": "Ticket da OS: %{OS} \n",
+        "date": "Data da OS: %{date} \n",
+        "client": {
+          "title": "Detalhes do Cliente \n",
+          "reason": "Razao: %{reason} \n",
+          "cnpj": "CNPJ: %{cnpj} \n",
+          "contact": "Contato: %{contact} \n",
+          "responsible": "Responsavel: %{responsible} \n",
+          "function": "Funcao: %{function} \n",
+          "cpf": "CPF: %{cpf} \n"
+        },
+        "driver": {
+          "title": "Detalhes do Transportador \n",
+          "board": "Placa: %{board} \n",
+          "userName": "Motorista: %{userName} \n"
+        },
+        "residues": {
+          "title": "Residuos \n",
+          "description": "Descricao: %{description} \n",
+          "amount": "Quantidade: %{amount} - %{unit} \n\n",
+          "notFound": "Coleta nao possui residuos \n"
+        },
+        "observations": "Observacoes: %{observations} \n"
+      },
+      "exceptions": {
+        "checkPrinters": "Ocorreu um erro ao verificar as impressoras",
+        "activeBluetooth": "Ative o bluetooth para continuar",
+        "statusBluetooth": "Sem acesso ao bluetooth, verifique as permissões",
+        "invalidPrint": "Impressora selecionada inválida",
+        "connectError": "Ocorreu um erro ao tentar conectar com %{name}"
+      }
+    },
+    "stateMtr": {
+      "title": "Estados MTR",
+      "sinir": "SINIR",
+      "notFound": "Nenhum estado encontrado",
+      "screenError": "Ocorreu um erro com a tela para retornar"
+    },
+    "addRegions": {
+      "title": "Adicionar Regiões",
+      "board": "Placa",
+      "selectBoard": "Selecione uma Placa",
+      "addRegionsContainer": "Adicionar Regiões",
+      "placeholderRegions": "Adicione algumas regiões",
+      "settingOK": "Alterações definidas com sucesso!",
+      "requiredBoard": "Você deve selecionar uma placa",
+      "requiredRegions": "Você deve selecionar pelo menos 1 região",
+      "button": "Gravar"
+    },
+    "changeBoard": {
+      "title": "Alterar Placa",
+      "search": "Pesquisar por placa",
+      "chageSuccess": "Placa alterada com sucesso!",
+      "changeError": "Ocorreu um erro ao selecionar a placa",
+      "notFound": "Nenhuma placa encontrada"
+    },
+    "changePassword": {
+      "title": "Alterar Senha",
+      "chageSuccess": "Senha alterada com sucesso!",
+      "form": {
+        "currentPassword": "Senha Atual",
+        "currentPasswordPlaceholder": "Informe a senha atual",
+        "newPassword": "Nova Senha",
+        "newPasswordPlaceholder": "Informe a nova senha",
+        "repeatPassword": "Repetir Senha",
+        "repeatPasswordPlaceholder": "Repita a nova senha"
+      },
+      "button": "Alterar"
+    },
+    "backup": {
+      "title": "Fazer Backup",
+      "server": "Servidor",
+      "password": "Senha",
+      "passwordPlaceholder": "Informe a senha",
+      "serverPlaceholder": "Informe o servidor",
+      "backupSuccess": "Backup realizado com sucesso!",
+      "confirmData": "Verifique os dados acima e tente novamente",
+      "noPermission": "A senha informada está incorreta",
+      "noDatabase": "Banco de dados não existe no dispositivo",
+      "noShareService": "Serviço indísponivel no disposítivo",
+      "button": "Backup"
+    },
+    "clientContainer": {
+      "title": "Containers",
+      "localOnly": "Exibir somente no local",
+      "lastDays": "Últimos 60 dias",
+      "notFound": "Nenhum container encontrado"
+    },
+    "clientDetails": {
+      "title": "Detalhes do Cliente",
+      "client": "Cliente",
+      "containers": "Containers",
+      "viewClient": "Ver Cliente",
+      "checkIn": "Check In",
+      "checkOut": "Check Out",
+      "clientAddress": "Endereço do Cliente",
+      "addLocalization": "Adicionar Localização",
+      "checkInExist": "Já existe um cliente com Check In ativo",
+      "clientInvalidCode": "O código do cliente é inválido",
+      "localizationSuccess": "Localização atualizada com sucesso!",
+      "checkInSuccess": "Check In realizado com sucesso!",
+      "checkOutSuccess": "Check Out realizado com sucesso!",
+      "confirmLocalization": "Tem certeza que deseja adicionar a localização ao cliente?",
+      "localization": "Verifique se a versão do Android é igual ou superior a 8.0.0 ou se sua localização está ajustada!"
+    },
+    "clients": {
+      "title": "Clientes",
+      "search": "Pesquisar",
+      "notFound": "Nenhum cliente encontrado",
+      "selectClientError": "Ocorreu um erro ao selecionar o cliente"
+    },
+    "collectDetails": {
+      "locationSharingStopMessage": "Compartilhamento de localização desativado",
+      "locationSharingStartMessage": "Compartilhamento de localização ativado",
+      "locationSharingStart": "Compartilhar Localização",
+      "locationSharingStop": "Parar Compartilhamento",
+      "locationSharingExist": "Outra coleta está com o compartilhamento ativo",
+      "reasonRequired": "Você deve selecionar um motivo",
+      "invalidClient": "Cliente inválido",
+      "phoneInvalid": "Número do telefone inválido, tente novamente mais tarde",
+      "checkInSuccess": "Check In realizado com sucesso!",
+      "checkOutSuccess": "Check Out realizado com sucesso!",
+      "draftMessage": "Um rascunho foi encontrado, deseja usa-lo?",
+      "callCustomerMessage": "Tem certeza que deseja ligar para o cliente?",
+      "callCustomer": "Ligar para Cliente",
+      "notCollected": "Não Coletado",
+      "selectReason": "Selecione um Motivo",
+      "addstop": "Adicionar Parada",
+      "observation": "Observações",
+      "address": "Endereço",
+      "responsible": "Responsável",
+      "work": "Ponto de Coleta: ",
+      "location": {
+        "title": "Escolha onde deseja abrir a coleta:",
+        "maps": "Abrir no Maps",
+        "waze": "Abrir no Waze"
+      },
+      "contract": "Contrato: ",
+      "checkIn": "Check In",
+      "checkOut": "Check Out",
+      "notFound": "Coleta não foi encontrada",
+      "checkInExist": "Já existe um cliente com Check In ativo",
+      "button": "Continuar"
+    },
+    "collectDetailsLocal": {
+      "title": "Detalhes Coleta Histórico",
+      "invalidClient": "Cliente inválido",
+      "work": "Ponto de coleta: ",
+      "sinir": "SINIR",
+      "photos": "Fotos da OS",
+      "mtrsDetails": "MTR's",
+      "contract": "Contrato: ",
+      "responsibleInfo": "Informações do Responsável",
+      "responsibleName": "Nome do Responsável",
+      "responsibleFunction": "Função do Responsável",
+      "responsibleEmail": "E-mail do Responsável",
+      "reasonDetails": "Detalhes do Motivo",
+      "reason": "Motivo",
+      "responsibleDocument": "CPF/CNPJ do Responsável",
+      "residuesList": "Lista de Resíduos",
+      "equipamentList": "Lista de Equipamentos",
+      "additionalInfo": "Informações Adicionais",
+      "observation": "Observações",
+      "mtrOnline": "MTR",
+      "board": "Placa",
+      "collectAddress": "Endereço da Coleta",
+      "mtr": {
+        "alertPDFAux": "Deseja gerar o Documento Auxiliar de Transporte de Resíduos?",
+        "syncSuccess": "MTR's sincronizados com sucesso!",
+        "message": "Selecione algum MTR para ver o PDF",
+        "notInformed": "Número não informado",
+        "mtrOnline": "Gerado Online",
+        "mtrOffline": "Documento Auxiliar",
+        "errors": {
+          "residuesLength": "Um ou mais resíduos estão com vínculos incorretos, verifique com o setor responsável",
+          "defaultError": "Ocorreu um erro ao gerar o PDF, verifique os dados configurados",
+          "downloadAlert": "Deseja fazer o download dos MTR's Gerados?",
+          "noConnection": "Sem conexão com a internet, tente gerar um Documento Auxiliar de Transporte de Resíduos",
+          "configurationError": "Os dados do gerador não foram configurados corretamente no Vision Controller, verifique com o setor responsável",
+          "conveyorError": "Os dados do transportador não foram configurados corretamente no Vision Controller, verifique com o setor responsável",
+          "addresseeError": "Os dados do destinador não foram configurados corretamente no Vision Controller, verifique com o setor responsável",
+          "residuesError": "Nenhum resíduo disponível para a impressão do MTR, verifique com o setor responsável"
+        }
+      }
+    },
+    "collectEquipament": {
+      "title": "Lista de Equipamentos",
+      "search": "Pesquisar",
+      "removeEquipamentSuccess": "Equipamento removido com sucesso!",
+      "selectEquipamentError": "Ocorreu um erro ao selecionar o equipamento",
+      "invalidCode": "Código do equipamento inválido",
+      "scanMessage": "Centralize para escanear e remover o equipamento",
+      "notFoundEquipament": "Equipamento não encontrado",
+      "removeEquipamentMessage": "Tem certeza que deseja remover o equipamento?",
+      "replaceMessage": "Vai ser removido o equipamento antigo, deseja continuar com a substituição?",
+      "removeForbidden": "Você não pode remover o equipamento na mesma OS que foi adicionado",
+      "remove": "Remover",
+      "notFound": "Nenhum equipamento encontrado",
+      "add": "Adicionar",
+      "continue": "Continuar"
+    },
+    "collectResidues": {
+      "title": "Lista de Resíduos",
+      "attention": "Atenção:",
+      "attentionMessage": "A coleta possui resíduos duplicados",
+      "residueRequired": "Você deve adicionar alguns resíduos para continuar",
+      "residuesValidate": "A quantidade dos resíduos informada é inválida",
+      "notFound": "Nenhum resíduo encontrado",
+      "add": "Adicionar",
+      "signature": "Assinatura",
+      "deleteConfirm": "Tem certeza que deseja deletar esse resíduo?",
+      "amountMoreError": "Ocorreu um erro ao tentar adicionar a quantidade de resíduo",
+      "amountDimError": "Ocorreu um erro ao tentar diminuir a quantidade de resíduo",
+      "amountChangeError": "Ocorreu um erro ao tentar alterar a quantidade de resíduo",
+      "continue": "Continuar",
+      "quantityConfirmationMessage": "Tem certeza que deseja prosseguir com a quantidade de: %{totalResiduo} resíduo",
+      "pluralQuantityConfirmationMessage": "Tem certeza que deseja prosseguir com a quantidade de: %{totalResiduo} resíduos"
+    },
+    "collectFilter": {
+      "title": "Filtrar Coletas",
+      "filters": "Filtros",
+      "selectClient": "Selecione um Cliente",
+      "selectWork": "Ponto de Coleta",
+      "initialDate": "Data Inicial",
+      "endDate": "Data Final",
+      "route": "Rota",
+      "calendarButton": "Confirmar",
+      "filterByDate": "Filtrar por Data",
+      "qrCodeClientMessage": "Escaneie o QR Code do cliente para filtrar as coletas",
+      "qrCodePointMessage": "Escaneie o QR Code de ponto de coleta para filtrar as coletas",
+      "screenError": "Ocorreu um erro com a tela para retornar",
+      "allRoutes": "Todas as Rotas",
+      "scripting": {
+        "allScripted": "Todas as Roteirização",
+        "notScripted": "Não Roteirizadas",
+        "onlyScripted": "Apenas Roteirizadas"
+      },
+      "classification": {
+        "title": "Todas as Classificações",
+        "collect": "Coleta",
+        "delivery": "Entrega"
+      },
+      "clean": "Limpar",
+      "filter": "Filtrar"
+    },
+    "collectCheck": {
+      "title": "Responsável",
+      "responsibleName": "Nome do Responsável",
+      "responsibleFunction": "Função do Responsável",
+      "responsibleEmail": "E-mail do Responsável",
+      "responsibleDocument": "CPF/CNPJ do Responsável",
+      "scanMessage": "Centralize para escanear",
+      "observation": "Observação",
+      "clientMtr": "MTR do Cliente",
+      "clientMtrCode": "MTR Código de Barras",
+      "addPhotos": "Adicionar Fotos",
+      "send": "Enviar",
+      "signature": "Assinar",
+      "notInformed": "Número não informado",
+      "resume": "Resumo da Coleta",
+      "mtrs": "MTR's",
+      "sinir": "SINIR",
+      "osPending": "A OS %{os} deve ser coletada antes para continuar",
+      "addMTR": "Adicionar MTR",
+      "codeOSInvalid": "Código da OS inválido, verifique e tente novamente",
+      "collectHistoryLocal": "OS adicionada ao histórico localmente com sucesso!",
+      "mtrDelete": "Ocorreu um erro ao deletar o MTR",
+      "form": {
+        "responsibleRequired": "Responsável é obrigatório",
+        "responsibleFunctionRequired": "Função do Responsável é obrigatória",
+        "invalidEmail": "Verifique o E-mail"
+      },
+      "signatureRequired": "Você deve assinar antes",
+      "collectLocallySuccess": "Coleta gravada localmente com sucesso!",
+      "collectDeleted": "OS excluída no Controller, gerada nova OS com os dados",
+      "collectCanceled": "Coleta cancelada no Controller, gerada nova OS com os dados",
+      "sendCollectSuccess": "Coleta enviada com sucesso!",
+      "photoRequired": "Você precisa adicionar ao menos uma foto na OS."
+    },
+    "sheduledCollections": {
+      "title": "Coletas Agendadas",
+      "board": "Placa:",
+      "location": {
+        "title": "Escolha onde deseja abrir a coleta:",
+        "maps": "Abrir no Maps"
+      },
+      "startLocation": "Tem certeza que deseja iniciar o compartilhamento?",
+      "searchCustomersWorks": "Pesquisar Clientes / Obras",
+      "stopLocation": "Tem certeza que deseja parar o compartilhamento?",
+      "synchronizeMessage": "Tem certeza que deseja sincronizar todas as coletas?",
+      "mapMessage": "Tem certeza que deseja abrir o mapa?",
+      "allCities": "Todas as Cidades",
+      "showMapError": "Não existe coletas para mostrar no mapa",
+      "immobilize": "Imobilizados",
+      "observation": "Observações",
+      "referring": "Referente",
+      "notFound": "Nenhuma coleta encontrada",
+      "totalCollect": "Coletas %{page} de %{total}"
+    },
+    "settings": {
+      "title": "Configurações",
+      "locallyMessageError": "Você não tem acesso a opção com offline ativo",
+      "collectPendent": "Existem coletas pendentes no dispositivo, você deve sincronizar para poder de continuar",
+      "updateOK": "Você está com a versão mais recente instalada",
+      "options": {
+        "title": "Opções",
+        "workOff": "Trabalhar Offline",
+        "changePassword": "Alterar Senha",
+        "myData": "Meus Dados",
+        "backup": "Fazer Backup",
+        "update": "Verificar Atualizações",
+        "server": "Alterar Servidor",
+        "balance": "Alterar Balanças",
+        "changeBoard": "Alterar Placa",
+        "changeRegions": "Alterar Regiões",
+        "logof": "Sair da Conta",
+        "usageTips": "Dicas de Uso App"
+      }
+    },
+    "equipamentDetailsLocal": {
+      "title": "Detalhes do Equipamento",
+      "name": "Nome",
+      "movementCode": "Código Movimentação",
+      "datePlacement": "Data Colocação",
+      "withdrawalDate": "Data Retirada",
+      "notFound": "Nenhum equipamento para exibir"
+    },
+    "report": {
+      "title": "Relatório",
+      "subtitle": "O APP POSSUI DADOS NÃO SINCRONIZADOS "
+    },
+    "residuesDetailsLocal": {
+      "title": "Detalhes do Resíduo",
+      "name": "Nome",
+      "subgroup": "SubGrupo",
+      "amount": "Quantidade",
+      "observation": "Observação",
+      "photos": "Fotos",
+      "selectPhotoError": "Ocorreu um erro ao selecionar a foto",
+      "notFound": "Nenhum resíduo para exibir"
+    },
+    "collectHistory": {
+      "title": "Histórico de Coletas",
+      "search": "Pesquisar",
+      "invalidCollectCode": "Código da coleta inválido",
+      "notFound": "Nenhuma coleta encontrada"
+    },
+    "home": {
+      "title": "VS Resíduos",
+      "userName": "Olá, %{name}",
+      "versionAlert": "Você deve atualizar seu aplicativo para continuar",
+      "noOSPermission": "Você não possui permissão para cadastrar OS",
+      "synchronizeSuccess": "Sincronização realizada com sucesso!",
+      "synchronizeMessagePermission": "Você não pode sincronizar com a opção offline ativa",
+      "synchronizeMessage": "Tem certeza que deseja sincronizar tudo?",
+      "boardError": "Ocorreu um erro, verifique a placa do veículo e tente novamente",
+      "options": {
+        "scheduledCollections": "Coletas Agendadas",
+        "clients": "Clientes",
+        "drafts": "Rascunhos",
+        "history": "Histórico",
+        "newCollect": "Nova Coleta",
+        "settings": "Configurações",
+        "synchronize": "Sincronizar",
+        "report": "Relatório"
+      }
+    },
+    "myData": {
+      "title": "Meus Dados",
+      "name": "Nome",
+      "login": "Login",
+      "cpf": "CPF",
+      "phone": "Telefone",
+      "notInformed": "Não informado",
+      "photoMessage": "Tire a foto do seu rosto",
+      "exceptions": {
+        "photoSuccess": "Foto atualizada com sucesso!"
+      }
+    },
+    "immobilize": {
+      "title": "Imobilizados",
+      "notFound": "Nenhum imobilizado encontrado"
+    },
+    "equipamentList": {
+      "title": "Adicionar Equipamento",
+      "search": "Pesquisar",
+      "added": "Adicionado",
+      "equipamentExist": "Equipamento já existe na lista, escolha outro",
+      "scanMessage": "Centralize para escanear e adicionar o equipamento",
+      "equipamentNotFound": "Equipamento não encontrado",
+      "equipamentReplaceSuccess": "Equipamento substituído com sucesso!",
+      "equipamentAddSuccess": "Equipamento adicionado com sucesso!",
+      "selectEquipamentError": "Ocorreu um erro ao selecionar o equipamento",
+      "notFound": "Nenhum equipamento encontrado",
+      "totalEquipamentList": "Total de Equipamentos: %{total}"
+    },
+    "equipamentListLocal": {
+      "title": "Lista de Equipamentos",
+      "deleted": "Retirado",
+      "invalidCode": "Código do equipamento inválido",
+      "notFound": "Nenhum equipamento encontrado"
+    },
+    "residuesList": {
+      "title": "Adicionar Resíduo",
+      "search": "Pesquisar",
+      "added": "Adicionado",
+      "double": "Duplicado",
+      "selectResidueError": "Ocorreu um erro ao selecionar o resíduo",
+      "notFound": "Nenhum resíduo encontrado"
+    },
+    "residuesListLocal": {
+      "title": "Lista de Resíduos",
+      "notFound": "Nenhum resíduo encontrado"
+    },
+    "reasons": {
+      "title": "Motivos",
+      "selectReasonError": "Ocorreu um erro ao selecionar o motivo",
+      "notFound": "Nenhum motivo encontrado"
+    },
+    "listStops": {
+      "title": "Lista de Paradas",
+      "selectReasonError": "Ocorreu um erro ao listar as paradas",
+      "notFound": "Nenhuma parada encontrada"
+    },
+    "addStops": {
+      "title": "Adicionar Paradas",
+      "selectReasonError": "Ocorreu um erro ao adicionar a parada",
+      "notFound": "Nenhuma parada encontrada"
+    },
+    "newCollect": {
+      "title": "Nova Coleta",
+      "client": "Cliente",
+      "work": "Ponto de coleta",
+      "workRequired": "Você deve selecionar uma Ponto de coleta antes",
+      "notCollected": "Não Coletado",
+      "reasonMessage": "Selecione um Motivo",
+      "selectClient": "Selecione um Cliente",
+      "selectWork": "Selecione uma Ponto de coleta",
+      "observation": "Observações",
+      "workAddress": "Endereço do Ponto de coleta",
+      "clientAddress": "Endereço do Cliente",
+      "reasonRequired": "Você deve selecionar um motivo",
+      "boardRequired": "Configure uma placa para continuar",
+      "clientRequired": "Você deve selecionar um cliente",
+      "button": "Continuar"
+    },
+    "work": {
+      "title": "Pontos de Coleta",
+      "search": "Pesquisar",
+      "notFound": "Nenhum Ponto de coleta encontrado",
+      "selectWorkError": "Ocorreu um erro ao selecionar a Ponto de coleta"
+    },
+    "drafts": {
+      "title": "Rascunhos",
+      "search": "Pesquisar",
+      "OS": "OS %{os}",
+      "newCollect": "Nova Coleta",
+      "work": "Ponto de coleta: %{work}",
+      "notFound": "Nenhum rascunho encontrado"
+    },
+    "draftsDetails": {
+      "title": "Detalhes do Rascunho",
+      "deleteMessage": "Tem certeza que deseja deletar o rascunho?",
+      "toGoCollect": "Ir para Coleta",
+      "notFound": "Rascunho não encontrado",
+      "deleted": "Retirado",
+      "invalidCode": "Código do rascunho inválido",
+      "deleteDraftSuccess": "Rascunho deletado com sucesso!",
+      "clientDetails": {
+        "title": "Detalhes do Cliente",
+        "name": "Nome",
+        "phone": "Telefone"
+      },
+      "workDetails": {
+        "title": "Detalhes da Ponto de coleta",
+        "work": "Ponto de coleta"
+      },
+      "responsibleDetails": {
+        "title": "Detalhes do Responsável",
+        "name": "Nome do Responsável",
+        "occupation": "Função do Responsável",
+        "email": "E-mail do Responsável"
+      },
+      "mtrsDetails": {
+        "title": "Detalhes MTR's"
+      },
+      "reasonDetails": {
+        "title": "Detalhes Motivo",
+        "name": "Motivo",
+        "observation": "Observações"
+      },
+      "residuesDetails": {
+        "title": "Resíduos",
+        "amount": "Quantidade:",
+        "subGroup": "SubGrupo:",
+        "observation": "Observação:",
+        "excess": "Excesso:",
+        "noConform": "Não Conforme:",
+        "hasPhotos": "Possui fotos:",
+        "classification": "Classificação:",
+        "yes": "Sim",
+        "no": "Não"
+      },
+      "equipmentDetails": {
+        "title": "Equipamentos"
+      }
+    },
+    "regions": {
+      "title": "Regiões",
+      "search": "Pesquisar",
+      "selectRegionError": "Ocorreu um erro ao selecionar a região",
+      "notFound": "Nenhuma região encontrada"
+    },
+    "residue": {
+      "titleEdit": "Editar Resíduo",
+      "titleAdd": "Adicionar Resíduo",
+      "residueInfo": "Informações do Resíduo",
+      "residueMessage": "Selecione um Resíduo",
+      "amount": "Quantidade",
+      "observation": "Observação",
+      "excess": "Excesso",
+      "notAccording": "Não Conforme",
+      "addPhotos": "Adicionar Fotos",
+      "edit": "Editar",
+      "add": "Adicionar",
+      "save": "Salvar",
+      "added": "Adicionado",
+      "double": "Duplicado",
+      "attention": "Atenção:",
+      "attentionMessage": "O resíduo selecionado está duplicado nesta coleta",
+      "amountRequired": "A quantidade informada é inválida",
+      "amountInteger": "Você deve informar uma quantidade inteira"
+    },
+    "collectResume": {
+      "title": "Resumo da Coleta",
+      "signatureRequired": "Obrigatório assinar antes",
+      "collectSuccess": "Coleta enviada com sucesso!",
+      "residueList": "Lista de Resíduos",
+      "equipamentList": "Lista de Equipamentos",
+      "work": "Ponto de coleta: ",
+      "print": "Imprimir",
+      "contract": "Contrato: ",
+      "signature": "Assinar",
+      "send": "Enviar",
+      "residuesList": "Lista de Resíduos",
+      "equipmentList": "Lista de Equipamentos",
+      "photoRequired": "Você precisa adicionar ao menos uma foto na OS.",
+      "printOS": "Impressão de OS",
+      "wifi": "Wi-Fi",
+      "bluetooth": "Bluetooth"
+    },
+    "checklist": {
+      "title": "Checklist",
+      "observation": "Observações",
+      "button": "Continuar",
+      "questionsNotFound": "Grupo não possui perguntas cadastradas",
+      "questionsRequired": "Você deve responder todas as perguntas obrigatórias",
+      "invalidQuestion": "Pergunta inválida"
+    },
+    "refuseSignature": {
+      "title": "Recusa de Assinatura",
+      "refuseSignatureDetails": "Detalhes da Recusa",
+      "responsible": {
+        "title": "Responsável",
+        "placeholder": "Informe o responsável",
+        "required": "Você deve informar o responsável"
+      },
+      "reason": {
+        "title": "Motivo",
+        "placeholder": "Informe o motivo",
+        "required": "Você deve informar o motivo da recusa"
+      },
+      "button": "Finalizar"
+    }
+  },
+  "alerts": {
+    "attention": "Atenção",
+    "stay": "Ficar",
+    "yes": "Sim",
+    "no": "Não",
+    "confirm": "Confirmar",
+    "cancel": "Cancelar",
+    "ok": "Ok",
+    "logof": "Sair"
+  },
+  "yup": {
+    "vericationError": "Verifique os campos e tente novamente",
+    "cpf": "Verifique o CPF/CNPJ",
+    "required": {
+      "user": "Usuário é obrigatório",
+      "password": "Senha é obrigatória",
+      "currentpassword": "Senha atual é obrigatória",
+      "newPassword": "Nova senha é obrigatória",
+      "minimumPassword": "A senha deve ter no mínimo 4 caracteres",
+      "passwordEquals": "As senhas devem corresponder",
+      "repeatPassword": "Repita a nova senha"
+    }
+  },
+  "exceptions": {
+    "500": "%{code} - Ocorreu um problema durante a comunicação com o servidor, tente novamente mais tarde",
+    "501": "%{code} - Método não implementado",
+    "502": "%{code} - O servidor retornou uma resposta inválida",
+    "503": "%{code} - O servidor está em manutenção ou sobrecarregado",
+    "504": "%{code} - O servidor retornou tempo limite de operação",
+    "505": "%{code} - A versão HTTP usada na requisição não é suportada pelo servidor",
+    "506": "%{code} - O servidor tem um erro de configuração interna",
+    "507": "%{code} - O método não pôde ser executado no recurso porque o servidor não pode armazenar a representação necessária para concluir a solicitação com êxito",
+    "508": "%{code} - O servidor detectou um loop infinito ao processar a solicitação",
+    "510": "%{code} - Extensões adicionais à solicitação são necessárias para que o servidor a atenda",
+    "511": "%{code} - Necessário autenticação para obter acesso",
+    "badRequest": "Ocorreu um erro, verifique os dados e tente novamente",
+    "invalidLogin": "Usuário ou senha incorretos",
+    "noContent": "Sem conteúdo",
+    "internet": "Ocorreu um erro com a conexão do servidor",
+    "locationError": "Erro ao pegar localização, verifique as configurações",
+    "differentMobile": "Não pode sincronizar com celulares diferentes",
+    "notAuthorized": "Usuário não autorizado, verifique e tente novamente mais tarde",
+    "notFound": "Não encontrado",
+    "forbidden": "Voçê não possui permissão para acessar algumas funções",
+    "userIsBanned": "Usuário temporariamente banido, entre em contato com o suporte",
+    "noApiConnection": "Verifique sua conexão com a internet",
+    "apiError": "Erro de conexão com a API",
+    "unknonwApi": "%{code} - O servidor encontrou uma situação com a qual não sabe lidar",
+    "customs": {
+      "sql": {
+        "sqlExecute": "Erro ao tentar executar SQL localmente",
+        "sqlCreate": "Erro ao tentar criar a tabela %{table} localmente",
+        "sqlDelete": "Erro ao tentar deletar um registro localmente",
+        "sqlInsert": "Erro ao tentar inserir um registro localmente",
+        "sqlUpdate": "Erro ao tentar atualizar um registro localmente",
+        "sqlEmptyArray": "Erro ao tentar inserir uma lista vazia locamente",
+        "asyncCallbackError": "Erro ao tentar executar callback localmente"
+      },
+      "notFoundMobile": "Dispositivo não encontrado, tente novamente ou entre em contato com o responsável",
+      "freeSpaceLimit": "O armazenamento do dispositivo está próximo do limite, verifique o espaço em uso",
+      "lockSpaceMessage": "O armazenamento do dispositivo ultrapassou o limite máximo necessário para o correto funcionamento do aplicativo, não será permitido continuar até liberar mais espaço por questões de segurança",
+      "currentPassword": "Senha atual não é válida",
+      "checkOut": "Cliente não possui Check In ativo",
+      "loginExist": "Está conta já está logada em outro dispositivo"
+    }
+  }
+}

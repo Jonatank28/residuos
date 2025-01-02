@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartaoContainer /> matches last snapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 5,
+        "marginBottom": 10,
+        "paddingBottom": 10,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "paddingBottom": 5,
+          "paddingLeft": 10,
+          "paddingRight": 10,
+          "paddingTop": 5,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#3C3C3C",
+            "fontFamily": "Proxima-Bold",
+            "fontSize": 16,
+            "fontWeight": "500",
+          },
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "paddingBottom": 5,
+          "paddingLeft": 5,
+          "paddingRight": 5,
+          "paddingTop": 5,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexBasis": 0,
+            "flexDirection": "row",
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "space-between",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#8F8F8F",
+              "fontFamily": "Proxima-Semibold",
+              "fontSize": 14.5,
+              "fontWeight": "600",
+            },
+          ]
+        }
+      >
+        [missing "en.components.containerCard.placementDate" translation]
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#8F8F8F",
+              "fontFamily": "Proxima-Semibold",
+              "fontSize": 14.5,
+              "fontWeight": "600",
+            },
+          ]
+        }
+      >
+        -
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexBasis": 0,
+            "flexDirection": "row",
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "space-between",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#8F8F8F",
+              "fontFamily": "Proxima-Semibold",
+              "fontSize": 14.5,
+              "fontWeight": "600",
+            },
+          ]
+        }
+      >
+        [missing "en.components.containerCard.withdrawalDate" translation]
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#8F8F8F",
+              "fontFamily": "Proxima-Semibold",
+              "fontSize": 14.5,
+              "fontWeight": "600",
+            },
+          ]
+        }
+      >
+        -
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexBasis": 0,
+            "flexDirection": "row",
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "space-between",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#8F8F8F",
+              "fontFamily": "Proxima-Semibold",
+              "fontSize": 14.5,
+              "fontWeight": "600",
+            },
+          ]
+        }
+      >
+        [missing "en.components.containerCard.driveCode" translation]
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#8F8F8F",
+              "fontFamily": "Proxima-Semibold",
+              "fontSize": 14.5,
+              "fontWeight": "600",
+            },
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
