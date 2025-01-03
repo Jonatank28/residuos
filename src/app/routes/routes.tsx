@@ -98,9 +98,12 @@ export type AuthNavigatorParamsList = {
   };
   [AuthRoutes.Clientes]: { isSelect: boolean, screen: string };
   [AuthRoutes.Motivos]: { screen: string };
-  [AuthRoutes.MotivosParada]: { screen: string };
-  [AuthRoutes.AdicionarParadas]: { screen: string };
+
+  // paradas
   [AuthRoutes.ListaParadas]: { screen: string };
+  [AuthRoutes.AdicionarParadas]: { screen: string };
+  [AuthRoutes.AdicionarMotivoParadas]: { screen: string };
+
   [AuthRoutes.ClienteContainers]: { containers: IContainer[] };
   [AuthRoutes.DetalhesDoCliente]: { clienteID: number };
   [AuthRoutes.Rascunhos]: { rascunhoDeletado: IOrder };
@@ -162,9 +165,12 @@ export enum AuthRoutes {
   FiltrarColetas = '/filtrar-coletas',
   Clientes = '/clientes',
   Motivos = '/motivos',
-  MotivosParada = '/motivosParada',
-  AdicionarParadas = '/adicionarParadas',
+
+  // paradas
   ListaParadas = '/listaParadas',
+  AdicionarParadas = '/adicionarParadas',
+  AdicionarMotivoParadas = '/adicionarMotivoParadas',
+
   ClienteContainers = '/cliente-containers',
   DetalhesDoCliente = '/detalhes-cliente',
   HistoricoDeColetas = '/historico-coletas',

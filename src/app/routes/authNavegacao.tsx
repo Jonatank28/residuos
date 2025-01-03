@@ -54,6 +54,7 @@ import { BackHandler } from 'react-native';
 import { IScreenAuth } from './types';
 import TelaListaParadas from '../paginas/paradas/listaParadas';
 import TelaAdicionarParadas from '../paginas/paradas/adicionarParadas';
+import TelaAdicionarMotivoParadas from '../paginas/paradas/adicionarMotivoParadas';
 
 
 const AppStack = createStackNavigator<AuthNavigatorParamsList>();
@@ -118,9 +119,12 @@ const components: Record<string, IScreenAuth<''>> = {
   Assinatura: (props: any) => ScreenWrapper({ ...props, component: Assinatura }),
   TelaRecusaAssinatura: (props: any) => ScreenWrapper({ ...props, component: TelaRecusaAssinatura }),
   TelaRelatorio: (props: any) => ScreenWrapper({ ...props, component: TelaRelatorio }),
+
   // paradas
   TelaListaParadas: (props: any) => ScreenWrapper({ ...props, component: TelaListaParadas }),
   TelaAdicionarParadas: (props: any) => ScreenWrapper({ ...props, component: TelaAdicionarParadas }),
+  TelaAdicionarMotivoParadas: (props: any) => ScreenWrapper({ ...props, component: TelaAdicionarMotivoParadas }),
+
 }
 
 const AuthRotas = () => (
@@ -273,12 +277,19 @@ const AuthRotas = () => (
     <AppStack.Screen name={AuthRoutes.Motivos} component={components.TelaMotivos} initialParams={{
       screen: '',
     }} />
+
+    {/* paradas */}
     <AppStack.Screen name={AuthRoutes.ListaParadas} component={components.TelaListaParadas} initialParams={{
       screen: '',
     }} />
     <AppStack.Screen name={AuthRoutes.AdicionarParadas} component={components.TelaAdicionarParadas} initialParams={{
       screen: '',
     }} />
+    <AppStack.Screen name={AuthRoutes.AdicionarMotivoParadas} component={components.TelaAdicionarMotivoParadas} initialParams={{
+      screen: '',
+    }} />
+
+
     <AppStack.Screen name={AuthRoutes.ClienteContainers} component={components.TelaClienteContainers} initialParams={{
       containers: [],
     }} />

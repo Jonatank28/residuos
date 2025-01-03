@@ -1,29 +1,21 @@
 import React from 'react';
 import { IScreenAuth } from '../../../routes/types';
 import { AuthRoutes } from '../../../routes/routes';
-import Controller from './Controller';
+import Controller, { ParadaTypes } from './Controller';
 import * as Styles from './styles';
 import I18n from 'i18n-js';
 import Cabecalho from '../../../componentes/cabecalho';
 import { FlatList, View } from 'react-native';
 import FeaterIcon from 'react-native-vector-icons/Feather'
 
-interface ParadaTypes {
-  id: number;
-  observacao: string;
-  motivo: string;
-  dataInicio: string;
-  horaInicio: string;
-  dataFim: string;
-  horaFim: string;
-}
+
 
 // Componente do Cartão
 const CartaoParada = ({ data }: { data: ParadaTypes }) => {
   return (
     <Styles.CartaoParadaContainer>
-      <Styles.Descricao>{data.observacao}</Styles.Descricao>
-      <Styles.Info>Motivo: {data.motivo}</Styles.Info>
+      <Styles.Descricao>Motivo: {data.motivo}</Styles.Descricao>
+      <Styles.Info>obervacao: {data.observacao || 'Nao informado'}</Styles.Info>
       <Styles.Info>Início: {data.dataInicio} às {data.horaInicio}</Styles.Info>
       <Styles.Info>Fim: {data.dataFim} às {data.horaFim}</Styles.Info>
 
@@ -45,25 +37,7 @@ const CartaoParada = ({ data }: { data: ParadaTypes }) => {
 
 const TelaListaParadas: IScreenAuth<AuthRoutes.ListaParadas> = ({ navigation, route }) => {
   const controller = Controller({ navigation, params: route.params });
-  const [data, setData] = React.useState<ParadaTypes[]>([{
-    id: 1,
-    observacao: 'Parada 1',
-    motivo: "almoço",
-    dataInicio: "02/01/2025",
-    horaInicio: "13:00",
-    dataFim: "02/01/2025",
-    horaFim: "14:00"
-  },
-  {
-    id: 2,
-    observacao: 'Parada 2',
-    motivo: "troca de pneu",
-    dataInicio: "02/01/2025",
-    horaInicio: "15:00",
-    dataFim: "02/01/2025",
-    horaFim: "18:00"
-  }]
-  );
+
 
 
   return (
@@ -72,9 +46,9 @@ const TelaListaParadas: IScreenAuth<AuthRoutes.ListaParadas> = ({ navigation, ro
       <Styles.Container>
         {/* Listagem das paradas */}
         <FlatList
-          data={data}
+          data={controller.dataList}
           renderItem={({ item }) => <CartaoParada data={item} />}
-          keyExtractor={(item) => item.id.toString()}
+          keyExtractor={(item, index) => item.id.toString() + index.toString()}
           contentContainerStyle={{
             paddingBottom: 20,
           }}

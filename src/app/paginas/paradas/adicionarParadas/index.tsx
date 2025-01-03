@@ -10,6 +10,7 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import { useTheme } from 'styled-components';
 import Botao from '../../../componentes/botao';
 import CartaoSimples from '../../../componentes/cartaoSimples';
+import { Text, View } from 'react-native';
 
 const TelaAdicionarParadas: IScreenAuth<AuthRoutes.AdicionarParadas> = ({ navigation, route }) => {
   const controller = Controller({ navigation, params: route.params });
@@ -20,26 +21,22 @@ const TelaAdicionarParadas: IScreenAuth<AuthRoutes.AdicionarParadas> = ({ naviga
       <Cabecalho titulo={I18n.t('screens.addStops.title')} temIconeDireita={false} />
       <Styles.Container>
         <Styles.ScrollContainer>
-          <ItemContainer hasIcon={false} title="Observaçao">
-            <Styles.Input
-              autoCorrect
-              value={controller?.observacao ?? ''}
-              onChangeText={text => controller.setObservacao(text)}
-              maxLength={100}
+          {/* // Adicionar motivo*/}
+          <Styles.NaoColetadoContainer>
+            <Text style={{ fontWeight: 'bold', paddingBottom: 10 }}>Adicionar motivo</Text>
+            <CartaoSimples
+              hasBorder
+              descricao='Motivo'
+              nomeIcone="chevron-right"
+              onPress={controller.navigateToAddCategory}
+              marginBottom={10}
             />
-          </ItemContainer>
-          {/* // Adicionar parada */}
-          <Styles.Container>
-            <Styles.NaoColetadoContainer>
-              <CartaoSimples
-                hasBorder
-                descricao={I18n.t('screens.collectDetails.addstop')}
-                nomeIcone="chevron-right"
-                onPress={controller.navigateToAddCategory}
-                marginBottom={10}
-              />
-            </Styles.NaoColetadoContainer>
-          </Styles.Container>
+            {controller.params.motivo ? (
+              <Text >{controller.params.motivo?.nome}</Text>
+            ) : (
+              <Text style={{ color: 'red' }}>Motivo ainda não adicionado</Text>
+            )}
+          </Styles.NaoColetadoContainer>
           <ItemContainer hasIcon={false} title='Data e Hora Inicial'>
             <Styles.DataHoraContainer>
               <Styles.DataContainer activeOpacity={0.5} onPress={() => controller.showPicker('dataInicial')}>
@@ -80,6 +77,14 @@ const TelaAdicionarParadas: IScreenAuth<AuthRoutes.AdicionarParadas> = ({ naviga
               </Styles.HoraContainer>
             </Styles.DataHoraContainer>
           </ItemContainer>
+          <ItemContainer hasIcon={false} title="Observaçao">
+            <Styles.Input
+              autoCorrect
+              value={controller?.observacao ?? ''}
+              onChangeText={text => controller.setObservacao(text)}
+              maxLength={100}
+            />
+          </ItemContainer>
           <Styles.BotaoContainer>
             <Botao
               texto='Adicionar'
@@ -89,14 +94,22 @@ const TelaAdicionarParadas: IScreenAuth<AuthRoutes.AdicionarParadas> = ({ naviga
             />
           </Styles.BotaoContainer>
 
-
-
           {controller.show && (
             <DateTimePicker
-              value={new Date()}
+              key={controller.show}
+              value={
+                controller.show === 'dataInicial'
+                  ? controller.date.dataInicial
+                  : controller.show === 'dataFinal'
+                    ? controller.date.dataFinal
+                    : controller.show === 'horaInicial'
+                      ? controller.hour.horaInicial
+                      : controller.hour.horaFinal
+              }
               mode={controller.show === 'dataInicial' || controller.show === 'dataFinal' ? 'date' : 'time'}
               display="default"
               onChange={controller.onChange}
+              is24Hour
             />
           )}
 
