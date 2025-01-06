@@ -11,6 +11,7 @@ export interface ParadaTypes {
   id: number;
   observacao: string;
   motivo: string;
+  motivoId: number;
   dataInicio: string;
   horaInicio: string;
   dataFim: string;
@@ -27,6 +28,7 @@ export default function Controller({ navigation, params }: Props) {
       id: 1,
       observacao: 'Parada 1',
       motivo: "almoço",
+      motivoId: 1,
       dataInicio: "02/01/2025",
       horaInicio: "13:00",
       dataFim: "02/01/2025",
@@ -36,6 +38,7 @@ export default function Controller({ navigation, params }: Props) {
       id: 2,
       observacao: 'Parada 2',
       motivo: "troca de pneu",
+      motivoId: 2,
       dataInicio: "02/01/2025",
       horaInicio: "15:00",
       dataFim: "02/01/2025",
@@ -50,13 +53,13 @@ export default function Controller({ navigation, params }: Props) {
       function formatarData(data: string) {
         const dataObj = new Date(data);
 
-        const ano = dataObj.getFullYear(); // 4 dígitos do ano
-        const mes = (dataObj.getMonth() + 1).toString().padStart(2, '0'); // Mês com 2 dígitos
-        const dia = dataObj.getDate().toString().padStart(2, '0'); // Dia com 2 dígitos
+        const ano = dataObj.getFullYear();
+        const mes = (dataObj.getMonth() + 1).toString().padStart(2, '0');
+        const dia = dataObj.getDate().toString().padStart(2, '0');
 
-        const hora = dataObj.getHours().toString().padStart(2, '0'); // Hora com 2 dígitos
-        const minuto = dataObj.getMinutes().toString().padStart(2, '0'); // Minutos com 2 dígitos
-        const segundo = dataObj.getSeconds().toString().padStart(2, '0'); // Segundos com 2 dígitos
+        const hora = dataObj.getHours().toString().padStart(2, '0');
+        const minuto = dataObj.getMinutes().toString().padStart(2, '0');
+        const segundo = dataObj.getSeconds().toString().padStart(2, '0');
 
         const dataFormatada = `${dia}/${mes}/${ano}`;
         const horaFormatada = `${hora}:${minuto}:${segundo}`;
@@ -68,28 +71,41 @@ export default function Controller({ navigation, params }: Props) {
       }
 
 
-      const formatData = {
-        id: 1,
+      const verifyExist = dataList.some(item => item.id === paramsData.id);
+
+      const data = {
+        id: paramsData.id,
         observacao: paramsData.observacao,
         motivo: paramsData.motivo,
+        motivoId: paramsData.motivoId,
         dataInicio: formatarData(paramsData.dataInicio).data,
         horaInicio: formatarData(paramsData.horaInicio).hora,
         dataFim: formatarData(paramsData.dataFim).data,
         horaFim: formatarData(paramsData.horaFim).hora
       };
 
-      setDataList([...dataList, formatData]);
+      if (!verifyExist) {
+        setDataList([...dataList, data]);
+      } else {
+        setDataList(dataList.map(item => item.id === paramsData.id ? data : item));
+      }
     }
+  }, [params, params.data]);
 
-  }, [params.data, params]);
 
 
   const navigateToAddStops = () => navigation.navigate(AuthRoutes.AdicionarParadas, { screen: AuthRoutes.AdicionarParadas });
+
+  const handleEdit = (item: ParadaTypes) => navigation.navigate(AuthRoutes.AdicionarParadas, { screen: AuthRoutes.AdicionarParadas, data: item });
+
+  const handleDelete = (id: number) => setDataList(dataList.filter(item => item.id !== id));
 
   return {
     navigation,
     params,
     navigateToAddStops,
-    dataList
+    dataList,
+    handleEdit,
+    handleDelete,
   };
 }

@@ -31,8 +31,8 @@ const TelaAdicionarParadas: IScreenAuth<AuthRoutes.AdicionarParadas> = ({ naviga
               onPress={controller.navigateToAddCategory}
               marginBottom={10}
             />
-            {controller.params.motivo ? (
-              <Text >{controller.params.motivo?.nome}</Text>
+            {controller.motivo.id > 0 ? (
+              <Text >{controller.motivo.nome}</Text>
             ) : (
               <Text style={{ color: 'red' }}>Motivo ainda não adicionado</Text>
             )}

@@ -12,6 +12,7 @@ import { IObra } from "../../core/domain/entities/obra";
 import { IOrder } from "../../core/domain/entities/order";
 import { IResiduo } from "../../core/domain/entities/residuo";
 import { IImobilizado } from "../../core/domain/entities/imobilizado";
+import { ParadaTypes } from "../paginas/paradas/listaParadas/Controller";
 
 export type AppNavigatorParamsList = {
   [AppRoutes.Home]: undefined;
@@ -101,7 +102,19 @@ export type AuthNavigatorParamsList = {
 
   // paradas
   [AuthRoutes.ListaParadas]: { screen: string };
-  [AuthRoutes.AdicionarParadas]: { screen: string };
+  [AuthRoutes.AdicionarParadas]: {
+    screen: string,
+    data?: {
+      dataFim: string;
+      dataInicio: string;
+      horaFim: string;
+      horaInicio: string;
+      id: number;
+      motivo: string;
+      motivoId: number;
+      observacao: string;
+    }
+  };
   [AuthRoutes.AdicionarMotivoParadas]: { screen: string };
 
   [AuthRoutes.ClienteContainers]: { containers: IContainer[] };

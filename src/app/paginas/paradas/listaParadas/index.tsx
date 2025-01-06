@@ -8,10 +8,8 @@ import Cabecalho from '../../../componentes/cabecalho';
 import { FlatList, View } from 'react-native';
 import FeaterIcon from 'react-native-vector-icons/Feather'
 
-
-
 // Componente do Cartão
-const CartaoParada = ({ data }: { data: ParadaTypes }) => {
+const CartaoParada = ({ data, handleEdit, handleDelete }: { data: ParadaTypes, handleEdit: (item: ParadaTypes) => void, handleDelete: (id: number) => void }) => {
   return (
     <Styles.CartaoParadaContainer>
       <Styles.Descricao>Motivo: {data.motivo}</Styles.Descricao>
@@ -20,12 +18,12 @@ const CartaoParada = ({ data }: { data: ParadaTypes }) => {
       <Styles.Info>Fim: {data.dataFim} às {data.horaFim}</Styles.Info>
 
       <Styles.ButtonContainer>
-        <Styles.EditButton>
+        <Styles.EditButton onPress={() => handleEdit(data)}>
           <Styles.FeatherIcone name="edit" size={16} color="#fff" />
           <Styles.ButtonText>Editar</Styles.ButtonText>
         </Styles.EditButton>
 
-        <Styles.DeleteButton>
+        <Styles.DeleteButton onPress={() => handleDelete(data.id)}>
           <Styles.FeatherIcone name="trash" size={16} color="#fff" />
           <Styles.ButtonText>Excluir</Styles.ButtonText>
         </Styles.DeleteButton>
@@ -38,8 +36,6 @@ const CartaoParada = ({ data }: { data: ParadaTypes }) => {
 const TelaListaParadas: IScreenAuth<AuthRoutes.ListaParadas> = ({ navigation, route }) => {
   const controller = Controller({ navigation, params: route.params });
 
-
-
   return (
     <>
       <Cabecalho titulo={I18n.t('screens.listStops.title')} temIconeDireita={false} />
@@ -47,7 +43,7 @@ const TelaListaParadas: IScreenAuth<AuthRoutes.ListaParadas> = ({ navigation, ro
         {/* Listagem das paradas */}
         <FlatList
           data={controller.dataList}
-          renderItem={({ item }) => <CartaoParada data={item} />}
+          renderItem={({ item }) => <CartaoParada data={item} handleEdit={controller.handleEdit} handleDelete={controller.handleDelete} />}
           keyExtractor={(item, index) => item.id.toString() + index.toString()}
           contentContainerStyle={{
             paddingBottom: 20,

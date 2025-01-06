@@ -11,7 +11,6 @@ export interface MotivoParadaTypes {
   nome: string;
 }
 
-// Componente do Cartão
 const Cartao = ({ data, navigateTo }: { data: MotivoParadaTypes, navigateTo: (data: MotivoParadaTypes) => void }) => {
   return (
     <Pressable
@@ -23,11 +22,8 @@ const Cartao = ({ data, navigateTo }: { data: MotivoParadaTypes, navigateTo: (da
   );
 };
 
-
-
 const TelaAdicionarMotivoParadas: IScreenAuth<AuthRoutes.AdicionarMotivoParadas> = ({ navigation, route }) => {
   const controller = Controller({ navigation, params: route.params });
-  console.log("🚀  route.params", route.params);
   const [data, setData] = React.useState<MotivoParadaTypes[]>([{
     id: 1,
     nome: 'Parada 1',
