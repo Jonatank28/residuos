@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import { AuthRoutes } from "../../../routes/routes";
 import { IControllerAuth } from "../../../routes/types";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export interface ParamsTypes {
   screen: string;
   data?: ParadaTypes;
+  osID?: number;
 }
 
 export interface ParadaTypes {
@@ -23,54 +25,58 @@ interface Props extends IControllerAuth<AuthRoutes.ListaParadas> {
 }
 
 export default function Controller({ navigation, params }: Props) {
-  const [dataList, setDataList] = React.useState<ParadaTypes[]>([
-    {
-      id: 1,
-      observacao: 'Parada 1',
-      motivo: "almoço",
-      motivoId: 1,
-      dataInicio: "02/01/2025",
-      horaInicio: "13:00",
-      dataFim: "02/01/2025",
-      horaFim: "14:00"
-    },
-    {
-      id: 2,
-      observacao: 'Parada 2',
-      motivo: "troca de pneu",
-      motivoId: 2,
-      dataInicio: "02/01/2025",
-      horaInicio: "15:00",
-      dataFim: "02/01/2025",
-      horaFim: "18:00"
-    }
-  ]);
+  const osId = params.osID;
+  const [dataList, setDataList] = React.useState<ParadaTypes[]>([]);
+
+  // Carregar dados do AsyncStorage ao iniciar
+  useEffect(() => {
+    const loadFromStorage = async () => {
+      try {
+        const storageData = await AsyncStorage.getItem(`paradas_${osId}`);
+        if (storageData) {
+          setDataList(JSON.parse(storageData));
+        }
+      } catch (error) {
+        console.error("Erro ao carregar dados do AsyncStorage", error);
+      }
+    };
+
+    loadFromStorage();
+  }, [osId]);
+
+  // Atualizar dados no AsyncStorage sempre que dataList mudar
+  useEffect(() => {
+    const saveToStorage = async () => {
+      try {
+        await AsyncStorage.setItem(`paradas_${osId}`, JSON.stringify(dataList));
+      } catch (error) {
+        console.error("Erro ao salvar dados no AsyncStorage", error);
+      }
+    };
+
+    saveToStorage();
+  }, [dataList, osId]);
+
+  const formatarData = (data: string) => {
+    const dataObj = new Date(data);
+
+    const ano = dataObj.getFullYear();
+    const mes = (dataObj.getMonth() + 1).toString().padStart(2, '0');
+    const dia = dataObj.getDate().toString().padStart(2, '0');
+
+    const hora = dataObj.getHours().toString().padStart(2, '0');
+    const minuto = dataObj.getMinutes().toString().padStart(2, '0');
+    const segundo = dataObj.getSeconds().toString().padStart(2, '0');
+
+    return {
+      data: `${dia}/${mes}/${ano}`,
+      hora: `${hora}:${minuto}:${segundo}`
+    };
+  };
 
   useEffect(() => {
     const paramsData = params.data;
-
     if (paramsData) {
-      function formatarData(data: string) {
-        const dataObj = new Date(data);
-
-        const ano = dataObj.getFullYear();
-        const mes = (dataObj.getMonth() + 1).toString().padStart(2, '0');
-        const dia = dataObj.getDate().toString().padStart(2, '0');
-
-        const hora = dataObj.getHours().toString().padStart(2, '0');
-        const minuto = dataObj.getMinutes().toString().padStart(2, '0');
-        const segundo = dataObj.getSeconds().toString().padStart(2, '0');
-
-        const dataFormatada = `${dia}/${mes}/${ano}`;
-        const horaFormatada = `${hora}:${minuto}:${segundo}`;
-
-        return {
-          data: dataFormatada,
-          hora: horaFormatada
-        };
-      }
-
-
       const verifyExist = dataList.some(item => item.id === paramsData.id);
 
       const data = {
@@ -92,14 +98,22 @@ export default function Controller({ navigation, params }: Props) {
     }
   }, [params, params.data]);
 
+  const navigateToAddStops = () =>
+    navigation.navigate(AuthRoutes.AdicionarParadas, { screen: AuthRoutes.AdicionarParadas });
 
+  const handleEdit = (item: ParadaTypes) =>
+    navigation.navigate(AuthRoutes.AdicionarParadas, { screen: AuthRoutes.AdicionarParadas, data: item });
 
-  const navigateToAddStops = () => navigation.navigate(AuthRoutes.AdicionarParadas, { screen: AuthRoutes.AdicionarParadas });
+  const handleDelete = async (id: number) => {
+    const updatedList = dataList.filter(item => item.id !== id);
+    setDataList(updatedList);
 
-
-  const handleEdit = (item: ParadaTypes) => navigation.navigate(AuthRoutes.AdicionarParadas, { screen: AuthRoutes.AdicionarParadas, data: item });
-
-  const handleDelete = (id: number) => setDataList(dataList.filter(item => item.id !== id));
+    try {
+      await AsyncStorage.setItem(`paradas_${osId}`, JSON.stringify(updatedList));
+    } catch (error) {
+      console.error("Erro ao excluir item no AsyncStorage", error);
+    }
+  };
 
   return {
     navigation,
