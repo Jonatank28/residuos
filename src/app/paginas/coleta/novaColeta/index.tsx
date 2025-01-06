@@ -43,13 +43,15 @@ const TelaNovaColeta: IScreenAuth<AuthRoutes.NovaColeta> = ({ navigation, route 
                 <Styles.Descricao>Verificando obras...</Styles.Descricao>
               </Styles.LoadingObraContainer>
             ) : controller.temVariasObras || controller.obra?.codigo ? (
-              <CartaoSimples
-                hasBorder
-                descricao={controller.obra.descricao ?? I18n.t('screens.newCollect.selectWork')}
-                nomeIcone="chevron-right"
-                onPress={controller.navigateToObras}
-                marginBottom={10}
-              />
+              <>
+                <CartaoSimples
+                  hasBorder
+                  descricao={controller.obra.descricao ?? I18n.t('screens.newCollect.selectWork')}
+                  nomeIcone="chevron-right"
+                  onPress={controller.navigateToObras}
+                  marginBottom={10}
+                />
+              </>
             ) : (
               <Styles.LoadingObraContainer>
                 <Styles.Descricao>
@@ -60,17 +62,16 @@ const TelaNovaColeta: IScreenAuth<AuthRoutes.NovaColeta> = ({ navigation, route 
           </ItemContainer>
 
           {/* // Adicionar parada nova coleta*/}
-          <Styles.Container>
+          {controller.temVariasObras || controller.obra?.codigo && (
             <Styles.NaoColetadoContainer>
               <CartaoSimples
                 hasBorder
                 descricao={I18n.t('screens.collectDetails.addstop')}
                 nomeIcone="chevron-right"
                 onPress={controller.navigateToListStops}
-                marginBottom={10}
               />
             </Styles.NaoColetadoContainer>
-          </Styles.Container>
+          )}
 
           <Styles.NaoColetadoContainer>
             <Styles.NaoColetadoTituloContainer noCollected={controller.naoColetado}>

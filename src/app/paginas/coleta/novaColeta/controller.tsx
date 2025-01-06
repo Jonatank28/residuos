@@ -14,6 +14,7 @@ import { AuthRoutes } from '../../../routes/routes';
 import { useColeta } from '../../../contextos/coletaContexto';
 import { useLocation } from '../../../contextos/localizacaoContexto';
 import { IControllerAuth } from '../../../routes/types';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 interface Props extends IControllerAuth<AuthRoutes.NovaColeta> { }
 
@@ -24,7 +25,7 @@ export default function Controller({ navigation, params }: Props) {
   const { placa } = useColeta();
   const { pegarPosicaoAtual } = useLocation();
   const { veiculo } = useColeta();
-  const { dispatchAlert } = useVSAlert();
+  const { dispatchAlert, closeMe } = useVSAlert();
   const storageContext = useStorage();
   const { offline } = useOffline();
   const { rascunho, pegarRascunho, setRascunho, atualizarGravarRascunho } = useRascunho();
@@ -39,9 +40,10 @@ export default function Controller({ navigation, params }: Props) {
   const [KMInicial, setKMInicial] = React.useState(0);
   const [KMFinalValido, setKMFinalValido] = React.useState(false);
 
+
   const navigateToMotivos = () => navigation.navigate(AuthRoutes.Motivos, { screen: AuthRoutes.NovaColeta });
 
-  const navigateToListStops = () => navigation.navigate(AuthRoutes.ListaParadas, { screen: AuthRoutes.ListaParadas, osID: coleta?.codigoOS ?? 0 });
+  const navigateToListStops = () => navigation.navigate(AuthRoutes.ListaParadas, { screen: AuthRoutes.ListaParadas, osID: cliente?.codigo ?? 0 });
 
   const navigateToClientes = () =>
     navigation.navigate(AuthRoutes.Clientes, {
@@ -136,6 +138,15 @@ export default function Controller({ navigation, params }: Props) {
     return Math.max(veiculo.kmFinal || 0, response);
   };
 
+  const deleteItemFromStorage = async (id: number) => {
+    try {
+      await AsyncStorage.removeItem(`paradas_${id}`);
+    } catch (error) {
+      console.error("Erro ao deletar item do AsyncStorage", error);
+    }
+  };
+
+
   const showRascunhoAlert = (_cliente: ICliente) =>
     dispatchAlert({
       type: 'open',
@@ -148,7 +159,13 @@ export default function Controller({ navigation, params }: Props) {
           codigoCliente: _cliente?.codigo ?? 0,
         });
       },
+      onPressLeft: () => {
+        deleteItemFromStorage(_cliente?.codigo ?? 0);
+        closeMe();
+      },
     });
+
+
 
   React.useEffect(() => {
     if (params.cliente?.codigo) {
