@@ -14,7 +14,7 @@ import { AuthRoutes } from '../../../routes/routes';
 import { useColeta } from '../../../contextos/coletaContexto';
 import { useLocation } from '../../../contextos/localizacaoContexto';
 import { IControllerAuth } from '../../../routes/types';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { deleteParadasFromStorage } from '../../../utils/paradas';
 
 interface Props extends IControllerAuth<AuthRoutes.NovaColeta> { }
 
@@ -138,15 +138,6 @@ export default function Controller({ navigation, params }: Props) {
     return Math.max(veiculo.kmFinal || 0, response);
   };
 
-  const deleteItemFromStorage = async (id: number) => {
-    try {
-      await AsyncStorage.removeItem(`paradas_${id}`);
-    } catch (error) {
-      console.error("Erro ao deletar item do AsyncStorage", error);
-    }
-  };
-
-
   const showRascunhoAlert = (_cliente: ICliente) =>
     dispatchAlert({
       type: 'open',
@@ -160,7 +151,7 @@ export default function Controller({ navigation, params }: Props) {
         });
       },
       onPressLeft: () => {
-        deleteItemFromStorage(_cliente?.codigo ?? 0);
+        deleteParadasFromStorage(_cliente?.codigo ?? 0);
         closeMe();
       },
     });

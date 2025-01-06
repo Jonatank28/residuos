@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { AuthRoutes } from "../../../routes/routes";
 import { IControllerAuth } from "../../../routes/types";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { getParadasFromStorage, setParadasToStorage } from "../../../utils/paradas";
 
 export interface ParamsTypes {
   screen: string;
@@ -31,8 +32,9 @@ export default function Controller({ navigation, params }: Props) {
   // Carregar dados do AsyncStorage ao iniciar
   useEffect(() => {
     const loadFromStorage = async () => {
+      if (!osId) return;
       try {
-        const storageData = await AsyncStorage.getItem(`paradas_${osId}`);
+        const storageData = await getParadasFromStorage(osId);
         if (storageData) {
           setDataList(JSON.parse(storageData));
         }
@@ -44,11 +46,11 @@ export default function Controller({ navigation, params }: Props) {
     loadFromStorage();
   }, [osId]);
 
-  // Atualizar dados no AsyncStorage sempre que dataList mudar
   useEffect(() => {
     const saveToStorage = async () => {
+      if (!osId) return;
       try {
-        await AsyncStorage.setItem(`paradas_${osId}`, JSON.stringify(dataList));
+        await setParadasToStorage(osId, dataList);
       } catch (error) {
         console.error("Erro ao salvar dados no AsyncStorage", error);
       }

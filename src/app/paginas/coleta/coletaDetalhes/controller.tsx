@@ -18,6 +18,7 @@ import { IDeviceClienteRepositorio } from '../../../../core/domain/repositories/
 import DeviceClienteRepositorio from '../../../../core/device/repositories/clienteRepositorio';
 import database from '../../../../core/database';
 import { useColeta } from '../../../contextos/coletaContexto';
+import { deleteParadasFromStorage } from '../../../utils/paradas';
 
 interface Props extends IControllerAuth<AuthRoutes.DetalhesDaColeta> { }
 
@@ -272,6 +273,7 @@ export default function Controller({ navigation, params }: Props) {
       onPressLeft: () => {
         closeMe();
         usarColeta();
+        deleteParadasFromStorage(params.coletaID);
       },
     });
 
