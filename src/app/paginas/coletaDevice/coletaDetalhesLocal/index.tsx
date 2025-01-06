@@ -17,6 +17,7 @@ import { useTheme } from 'styled-components/native';
 import moment from 'moment';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import { Text } from 'react-native';
 
 const TelaColetaDetalhesLocal: IScreenAuth<AuthRoutes.DetalhesDaColetaLocal> = ({ navigation, route }) => {
   const { configuracoes } = useUser();

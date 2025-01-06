@@ -15,7 +15,7 @@ import { useColeta } from '../../../contextos/coletaContexto';
 import { useLocation } from '../../../contextos/localizacaoContexto';
 import { IControllerAuth } from '../../../routes/types';
 
-interface Props extends IControllerAuth<AuthRoutes.NovaColeta> {}
+interface Props extends IControllerAuth<AuthRoutes.NovaColeta> { }
 
 export default function Controller({ navigation, params }: Props) {
   const { dispatchSnack } = useVSSnack();
