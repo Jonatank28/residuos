@@ -308,6 +308,7 @@ export const ColetaProvider: React.FC = ({ children }: Props) => {
     isSincronizacaoAutomatica?: boolean,
   ) => {
     const veiculoTeste = await pegarVeiculo();
+    console.log("akii envia a coletaaaaaa", coleta)
 
     if (configuracoes.obrigarUmaFotoOS && !coleta?.fotos?.length) {
       dispatchSnack({
@@ -364,8 +365,8 @@ export const ColetaProvider: React.FC = ({ children }: Props) => {
           ? await gravarNovaColetaLocal(coleta)
           : await novaColeta(coleta, veiculoTeste?.codigo ?? 0)
         : !isSincronizacao && offline
-        ? await gravarColetaAgendadaLocal(coleta)
-        : await enviarColetaAgendada(coleta, veiculoTeste?.codigo ?? 0, checkinsOS);
+          ? await gravarColetaAgendadaLocal(coleta)
+          : await enviarColetaAgendada(coleta, veiculoTeste?.codigo ?? 0, checkinsOS);
 
       let coletaGravadaLocalmente = false;
 
@@ -474,8 +475,8 @@ export const ColetaProvider: React.FC = ({ children }: Props) => {
                 ? I18n.t('screens.collectCheck.collectDeleted')
                 : I18n.t('screens.collectCheck.collectCanceled')
               : offline || coletaGravadaLocalmente
-              ? I18n.t('screens.collectCheck.collectLocallySuccess')
-              : I18n.t('screens.collectCheck.sendCollectSuccess'),
+                ? I18n.t('screens.collectCheck.collectLocallySuccess')
+                : I18n.t('screens.collectCheck.sendCollectSuccess'),
         });
       }
 

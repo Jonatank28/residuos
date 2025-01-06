@@ -122,6 +122,8 @@ export default function Controller({ navigation, params }: Props) {
 
             const response = await enviarColeta(coleta, params.novaColeta);
 
+            console.log("akii envia a coleta", coleta)
+
             if (response && params.novaColeta) {
                 navigation.navigate(AuthRoutes.Home);
             } else {
