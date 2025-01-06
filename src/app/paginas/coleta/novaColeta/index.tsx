@@ -59,6 +59,19 @@ const TelaNovaColeta: IScreenAuth<AuthRoutes.NovaColeta> = ({ navigation, route 
             )}
           </ItemContainer>
 
+          {/* // Adicionar parada nova coleta*/}
+          <Styles.Container>
+            <Styles.NaoColetadoContainer>
+              <CartaoSimples
+                hasBorder
+                descricao={I18n.t('screens.collectDetails.addstop')}
+                nomeIcone="chevron-right"
+                onPress={controller.navigateToListStops}
+                marginBottom={10}
+              />
+            </Styles.NaoColetadoContainer>
+          </Styles.Container>
+
           <Styles.NaoColetadoContainer>
             <Styles.NaoColetadoTituloContainer noCollected={controller.naoColetado}>
               <Styles.Titulo>{I18n.t('screens.newCollect.notCollected')}</Styles.Titulo>

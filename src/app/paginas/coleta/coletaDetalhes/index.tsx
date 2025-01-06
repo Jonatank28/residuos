@@ -98,7 +98,7 @@ const TelaColetaDetalhes: IScreenAuth<AuthRoutes.DetalhesDaColeta> = ({ navigati
                     </Styles.DescricaoLocalizacao>
                   </Styles.RowContainer>
                 ))}
-              {/* // Adicionar parada */}
+              {/* // Adicionar parada agendada*/}
               <Styles.Container>
                 <Styles.NaoColetadoContainer>
                   <CartaoSimples

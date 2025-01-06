@@ -41,6 +41,8 @@ export default function Controller({ navigation, params }: Props) {
 
   const navigateToMotivos = () => navigation.navigate(AuthRoutes.Motivos, { screen: AuthRoutes.NovaColeta });
 
+  const navigateToListStops = () => navigation.navigate(AuthRoutes.ListaParadas, { screen: AuthRoutes.ListaParadas, osID: coleta?.codigoOS ?? 0 });
+
   const navigateToClientes = () =>
     navigation.navigate(AuthRoutes.Clientes, {
       isSelect: true,
@@ -331,5 +333,6 @@ export default function Controller({ navigation, params }: Props) {
     setKMInicial,
     KMInicial,
     KMFinalValido,
+    navigateToListStops,
   };
 }
