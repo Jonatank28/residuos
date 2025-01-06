@@ -101,7 +101,7 @@ export type AuthNavigatorParamsList = {
   [AuthRoutes.Motivos]: { screen: string };
 
   // paradas
-  [AuthRoutes.ListaParadas]: { screen: string };
+  [AuthRoutes.ListaParadas]: { screen: string, osID: number };
   [AuthRoutes.AdicionarParadas]: {
     screen: string,
     data?: {

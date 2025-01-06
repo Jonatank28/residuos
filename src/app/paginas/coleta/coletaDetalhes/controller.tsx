@@ -49,7 +49,7 @@ export default function Controller({ navigation, params }: Props) {
   );
 
   const navigateToMotivos = () => navigation.navigate(AuthRoutes.Motivos, { screen: AuthRoutes.DetalhesDaColeta });
-  const navigateToListStops = () => navigation.navigate(AuthRoutes.ListaParadas, { screen: AuthRoutes.ListaParadas });
+  const navigateToListStops = () => navigation.navigate(AuthRoutes.ListaParadas, { screen: AuthRoutes.ListaParadas, osID: coleta?.codigoOS ?? 0 });
 
   const validarKmInicial = (): boolean => Boolean(veiculo.kmFinal && coleta?.KMInicial && coleta?.KMInicial < veiculo.kmFinal);
 
