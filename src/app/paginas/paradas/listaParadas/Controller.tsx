@@ -96,6 +96,7 @@ export default function Controller({ navigation, params }: Props) {
 
   const navigateToAddStops = () => navigation.navigate(AuthRoutes.AdicionarParadas, { screen: AuthRoutes.AdicionarParadas });
 
+
   const handleEdit = (item: ParadaTypes) => navigation.navigate(AuthRoutes.AdicionarParadas, { screen: AuthRoutes.AdicionarParadas, data: item });
 
   const handleDelete = (id: number) => setDataList(dataList.filter(item => item.id !== id));
