@@ -10,7 +10,7 @@ const deleteParadasFromStorage = async (id: number) => {
   }
 };
 
-const getParadasFromStorage = async (id: number) => {
+const getParadasFromStorage = async (id?: number) => {
   try {
     const paradas = await AsyncStorage.getItem(`paradas_${id}`);
     return paradas;

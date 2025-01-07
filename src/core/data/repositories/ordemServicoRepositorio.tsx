@@ -86,6 +86,7 @@ export default class OrdemServicoRepositorio implements IOrdemServicoRepositorio
             ordemServico: {
                 ...(this.removerimagens(params.coleta)),
                 ordemID: params.coleta?.codigoOrdem ?? 0,
+                paradas: params.coleta?.paradas ?? [],
                 codigoDispositivo: params.coleta?.codigoDispositivo ?? 0,
                 codigoMotorista: params.coleta?.codigoMotorista ?? 0,
                 mtrCodigoBarra: params.coleta?.codigoBarraMTR,
@@ -104,6 +105,8 @@ export default class OrdemServicoRepositorio implements IOrdemServicoRepositorio
                 longitudeOS: params.coleta?.enderecoOS?.latLng?.longitude ?? null
             }
         }
+
+        console.log("partadassaaaaaaaaaaa", data.ordemServico.paradas)
         data.ordemServico.residuos = data.ordemServico.residuos?.map(r => {
             //to-do - Thauã vai refatorar o que ele criou aqui. Boa Sorte. 
             let tara = r.imobilizado?.tara ?? '0';

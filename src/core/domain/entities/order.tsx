@@ -7,6 +7,7 @@ import { IMotivoRecusaAssinatura } from './motivoRecusaAssinatura';
 import { IMtr } from './mtr';
 import { IPergunta } from './pergunta';
 import { IResiduo } from './residuo';
+import { Parada } from '../../../app/contextos/coletaContexto';
 
 export interface IOrder {
   codigoOS?: number;
@@ -21,6 +22,7 @@ export interface IOrder {
   assinaturaBase64?: string;
   mtr?: string;
   mtrs?: IMtr[];
+  paradas?: Parada[];
   motivo?: IMotivo;
   motivoRecusaAssinatura?: IMotivoRecusaAssinatura;
   codigoBarraMTR?: string;

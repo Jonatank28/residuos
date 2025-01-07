@@ -75,14 +75,17 @@ export default function Controller({ navigation, params }: Props) {
       hora: `${hora}:${minuto}:${segundo}`
     };
   };
-
   useEffect(() => {
     const paramsData = params.data;
+
     if (paramsData) {
-      const verifyExist = dataList.some(item => item.id === paramsData.id);
+      // Verifica se o ID é válido (maior que 0), caso contrário, cria um novo ID
+      const validId = paramsData.id && paramsData.id > 0 ? paramsData.id : dataList.length + 1;
+
+      const verifyExist = dataList.some(item => item.id === validId);
 
       const data = {
-        id: paramsData.id,
+        id: validId, // Usa o ID validado
         observacao: paramsData.observacao,
         motivo: paramsData.motivo,
         motivoId: paramsData.motivoId,
@@ -93,9 +96,11 @@ export default function Controller({ navigation, params }: Props) {
       };
 
       if (!verifyExist) {
+        // Adiciona um novo item à lista
         setDataList([...dataList, data]);
       } else {
-        setDataList(dataList.map(item => item.id === paramsData.id ? data : item));
+        // Atualiza o item existente
+        setDataList(dataList.map(item => item.id === validId ? data : item));
       }
     }
   }, [params, params.data]);

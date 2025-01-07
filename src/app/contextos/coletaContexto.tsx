@@ -54,6 +54,7 @@ import GravarNovaColetaUseCase from '../../core/domain/usecases/device/database/
 import PegarNovasColetasUseCase from '../../core/domain/usecases/device/database/novaColeta/pegarNovasColetasUseCase';
 import { auditar } from '../../core/auditoriaHelper';
 import { getString } from '../../core/storageHelper';
+import { getParadasFromStorage } from '../utils/paradas';
 
 interface ColetaContextData {
   enviarColeta(
@@ -72,6 +73,17 @@ interface ColetaContextData {
   placa: string;
   veiculo: IVeiculo;
 }
+
+export type Parada = {
+  dataFim: string | null;
+  dataInicio: string | null;
+  horaFim: string | null;
+  horaInicio: string | null;
+  id: number | null;
+  motivo: string | null;
+  motivoId: number | null;
+  observacao: string | null;
+};
 
 type Props = { children?: React.ReactNode };
 
@@ -308,7 +320,35 @@ export const ColetaProvider: React.FC = ({ children }: Props) => {
     isSincronizacaoAutomatica?: boolean,
   ) => {
     const veiculoTeste = await pegarVeiculo();
-    console.log("akii envia a coletaaaaaa", coleta)
+    const codigoOs = coleta?.codigoOS;
+    const codigoCliente = coleta?.codigoCliente;
+    let paradas: Parada[] = [];
+
+    if (isNovaColeta) {
+      const res = await getParadasFromStorage(codigoCliente)
+      paradas = JSON.parse(res as string);
+    } else {
+      const res = await getParadasFromStorage(codigoOs)
+      paradas = JSON.parse(res as string);
+    }
+
+    const paradasFormatadas = paradas.map(parada => {
+      const dataInicio = new Date(`${parada.dataInicio.split('/').reverse().join('-')}T${parada.horaInicio}`);
+      const dataFim = new Date(`${parada.dataFim.split('/').reverse().join('-')}T${parada.horaFim}`);
+
+      const formatDate = (date) => {
+        return date.toISOString().replace('T', ' ').split('.')[0];
+      };
+
+      return {
+        ...parada,
+        dataInicio: formatDate(dataInicio),
+        dataFim: formatDate(dataFim)
+      };
+    });
+
+
+    coleta.paradas = paradasFormatadas;
 
     if (configuracoes.obrigarUmaFotoOS && !coleta?.fotos?.length) {
       dispatchSnack({
