@@ -148,6 +148,7 @@ export default class OrdemServicoRepositorio implements IOrdemServicoRepositorio
             ordemServico: {
                 ...(this.removerimagens(params.coleta)),
                 ordemID: params.coleta?.codigoOrdem ?? 0,
+                paradas: params.coleta?.paradas ?? [],
                 codigoDispositivo: params.coleta?.codigoDispositivo ?? 0,
                 codigoMotorista: params.coleta?.codigoMotorista ?? 0,
                 mtrCodigoBarra: params.coleta?.codigoBarraMTR,
