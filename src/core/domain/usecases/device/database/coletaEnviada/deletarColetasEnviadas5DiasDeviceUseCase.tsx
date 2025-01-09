@@ -6,6 +6,7 @@ import { IDeviceOrdemServicoRepositorio } from '../../../../repositories/device/
 import { IDeviceResiduoRepositorio } from '../../../../repositories/device/residuoRepositorio';
 import { IDeviceMotivoRepositorio } from '../../../../repositories/device/deviceMotivoRepositorio';
 import { IDeviceMtrRepositorio } from '../../../../repositories/device/mtrRepositorio';
+import { deleteAllParadasFromStorage, getParadasFromAllStorage } from '../../../../../../app/utils/paradas';
 
 export default class DeletarColetasEnviadas5DiasDeviceUseCase implements UseCase<void, void | Error> {
   constructor(
@@ -20,6 +21,9 @@ export default class DeletarColetasEnviadas5DiasDeviceUseCase implements UseCase
   async execute(): Promise<void | Error> {
     try {
       const coletas = await this.iDeviceOrdemServicoRepositorio.pegarColetasEnviadas5Dias();
+      console.log("🚀  coletas sqlite", coletas);
+      // await deleteAllParadasFromStorage()
+      await getParadasFromAllStorage()
 
       if (coletas.length > 0) {
         for await (const coleta of coletas._array) {

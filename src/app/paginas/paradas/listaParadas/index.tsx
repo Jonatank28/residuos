@@ -8,14 +8,51 @@ import Cabecalho from '../../../componentes/cabecalho';
 import { FlatList, View } from 'react-native';
 import FeaterIcon from 'react-native-vector-icons/Feather'
 
+const formatarDataISO = (data: string) => {
+  const [dia, mes, ano] = data.split('/');
+  return `${ano}-${mes}-${dia}`; // Retorna no formato ISO
+};
+
+// Função para calcular o tempo total
+const calcularTempoTotal = (dataInicio: string, horaInicio: string, dataFim: string, horaFim: string) => {
+  // Formata as datas para o padrão ISO
+  const dataInicioISO = formatarDataISO(dataInicio);
+  const dataFimISO = formatarDataISO(dataFim);
+
+  // Combina as datas e horas para criar objetos Date
+  const inicio = new Date(`${dataInicioISO}T${horaInicio}`);
+  const fim = new Date(`${dataFimISO}T${horaFim}`);
+
+  // Verifica se as datas são válidas
+  if (isNaN(inicio.getTime()) || isNaN(fim.getTime())) {
+    return 'Data inválida';
+  }
+
+  // Calcula a diferença em milissegundos
+  let diferencaMs = fim.getTime() - inicio.getTime();
+
+  // Converte para segundos, minutos e horas
+  const segundos = Math.floor((diferencaMs / 1000) % 60);
+  const minutos = Math.floor((diferencaMs / (1000 * 60)) % 60);
+  const horas = Math.floor((diferencaMs / (1000 * 60 * 60)) % 24);
+  const dias = Math.floor(diferencaMs / (1000 * 60 * 60 * 24));
+
+  // Formata o resultado
+  return `${dias > 0 ? `${dias}d ` : ''}${horas}h ${minutos}m ${segundos}s`;
+};
+
 // Componente do Cartão
 const CartaoParada = ({ data, handleEdit, handleDelete }: { data: ParadaTypes, handleEdit: (item: ParadaTypes) => void, handleDelete: (id: number) => void }) => {
+
+  const tempoTotal = calcularTempoTotal(data.dataInicio, data.horaInicio, data.dataFim, data.horaFim);
+
   return (
     <Styles.CartaoParadaContainer>
       <Styles.Descricao>Motivo: {data.motivo}</Styles.Descricao>
       <Styles.Info>obervacao: {data.observacao || 'Nao informado'}</Styles.Info>
       <Styles.Info>Início: {data.dataInicio} às {data.horaInicio}</Styles.Info>
       <Styles.Info>Fim: {data.dataFim} às {data.horaFim}</Styles.Info>
+      <Styles.Info>Tempo total: {tempoTotal}</Styles.Info>
 
       <Styles.ButtonContainer>
         <Styles.EditButton onPress={() => handleEdit(data)}>

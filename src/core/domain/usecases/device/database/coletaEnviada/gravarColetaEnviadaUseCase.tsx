@@ -7,6 +7,15 @@ import { IDeviceImagemRepositorio } from '../../../../repositories/device/imagem
 import { IDeviceMtrRepositorio } from '../../../../repositories/device/mtrRepositorio';
 import { IDeviceOrdemServicoRepositorio } from '../../../../repositories/device/ordemServicoRepositorio';
 import { IDeviceResiduoRepositorio } from '../../../../repositories/device/residuoRepositorio';
+import { deleteParadasFromStorage, getParadasFromStorage, setParadasToStorage } from '../../../../../../app/utils/paradas';
+
+// Pega a coleta com vinculo de pendente e coloca como enviada
+const gravarParadasLocal = async (coleta: IOrder, codigo: string) => {
+  const res = await getParadasFromStorage(coleta.codigoAntigo as string);
+  const paradas = res ? JSON.parse(res) : [];
+  await deleteParadasFromStorage(coleta.codigoAntigo as string);
+  await setParadasToStorage(codigo as string, paradas);
+};
 
 export default class GravarColetaEnviadaUseCase implements UseCase<IOrder, void | Error> {
   constructor(
@@ -16,11 +25,12 @@ export default class GravarColetaEnviadaUseCase implements UseCase<IOrder, void 
     private readonly iDeviceResiduoRepositorio: IDeviceResiduoRepositorio,
     private readonly iDeviceMtrRepositorio: IDeviceMtrRepositorio,
     private readonly iDeviceMotivoRepositorio: IDeviceMotivoRepositorio,
-  ) {}
+  ) { }
 
   async execute(coleta: IOrder): Promise<void | Error> {
     try {
       await this.iDeviceOrdemServicoRepositorio.inserirColetaEnviada(coleta, coleta?.codigoVinculo ?? '');
+      await gravarParadasLocal(coleta, coleta?.codigoVinculo ?? '');
 
       if (coleta?.enderecoOS) {
         await this.iDeviceEnderecoRepositorio.inserirEndereco(coleta?.codigoVinculo ?? '', coleta.enderecoOS);
@@ -32,7 +42,7 @@ export default class GravarColetaEnviadaUseCase implements UseCase<IOrder, void 
           foto.origem = 'OS';
 
           const res = await this.iDeviceImagemRepositorio.inserirImagem(foto, coleta?.codigoVinculo ?? '');
-          if(typeof res === 'number') foto.id = res;
+          if (typeof res === 'number') foto.id = res;
         }
       }
 
@@ -61,7 +71,7 @@ export default class GravarColetaEnviadaUseCase implements UseCase<IOrder, void 
               foto.origem = 'OSR';
 
               const res = await this.iDeviceImagemRepositorio.inserirImagem(foto, `${coleta?.codigoVinculo ?? ''}-${id}`);
-              if(typeof res === 'number') foto.id = res;
+              if (typeof res === 'number') foto.id = res;
             }
           }
         }

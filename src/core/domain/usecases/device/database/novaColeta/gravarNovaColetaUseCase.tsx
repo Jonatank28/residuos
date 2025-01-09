@@ -7,6 +7,14 @@ import { IDeviceImagemRepositorio } from '../../../../repositories/device/imagem
 import { IDeviceResiduoRepositorio } from '../../../../repositories/device/residuoRepositorio';
 import { IDeviceMtrRepositorio } from '../../../../repositories/device/mtrRepositorio';
 import { IDeviceMotivoRepositorio } from '../../../../repositories/device/deviceMotivoRepositorio';
+import { deleteParadasFromStorage, getParadasFromStorage, setParadasToStorage } from '../../../../../../app/utils/paradas';
+
+const gravarParadasLocal = async (coleta: IOrder, codigo: string) => {
+  const res = await getParadasFromStorage(coleta.codigoCliente as number);
+  const paradas = res ? JSON.parse(res) : [];
+  await deleteParadasFromStorage(coleta.codigoCliente as number);
+  await setParadasToStorage(codigo as string, paradas);
+};
 
 export default class GravarNovaColetaUseCase implements UseCase<IOrder, void | Error> {
   constructor(
@@ -18,9 +26,12 @@ export default class GravarNovaColetaUseCase implements UseCase<IOrder, void | E
     private readonly iDeviceMotivoRepositorio: IDeviceMotivoRepositorio,
   ) { }
 
+
+
   async execute(coleta: IOrder): Promise<void | Error> {
     try {
       const codigo = `@VRNOVACOLETAPENDENTE:${coleta.codigoCliente}-${new Date().getTime()}`;
+      await gravarParadasLocal(coleta, codigo);
 
       coleta.classificacaoOS = 3;
       coleta.codigoVinculo = codigo;
@@ -59,7 +70,7 @@ export default class GravarNovaColetaUseCase implements UseCase<IOrder, void | E
           foto.origem = 'OS';
 
           const res = await this.iDeviceImagemRepositoio.inserirImagem(foto, codigo);
-          if(typeof res === 'number') foto.id = res;
+          if (typeof res === 'number') foto.id = res;
         }
       }
 
@@ -87,7 +98,7 @@ export default class GravarNovaColetaUseCase implements UseCase<IOrder, void | E
               foto.origem = 'OSR';
 
               const res = await this.iDeviceImagemRepositoio.inserirImagem(foto, residuo?.codigoHashResiduo ?? '');
-              if(typeof res === 'number') foto.id = res;
+              if (typeof res === 'number') foto.id = res;
             }
           }
         }

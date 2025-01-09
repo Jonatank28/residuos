@@ -11,6 +11,7 @@ import { Parada } from '../../../app/contextos/coletaContexto';
 
 export interface IOrder {
   codigoOS?: number;
+  codigoAntigo?: string
   codigoOrdem?: number;
   codigoUnico?: string;
   codigoVinculo?: string;

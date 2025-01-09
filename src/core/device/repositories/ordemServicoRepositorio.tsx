@@ -846,7 +846,7 @@ export default class DeviceOrdemServicoRepositorio implements IDeviceOrdemServic
         CD_CLIENTE                  AS codigoCliente,
         DS_VINCULO                  AS codigoVinculo
       FROM ORDEM_SERVICO_COLETADAS
-      WHERE ABS(CAST((JulianDay(DT_ORDEM) - JulianDay(CURRENT_TIMESTAMP)) As Integer) * -1) >= 5`,
+              WHERE ABS(CAST((JulianDay(DT_ORDEM) - JulianDay(CURRENT_TIMESTAMP)) As Integer) * -1) >= 5`,
             [],
         );
 

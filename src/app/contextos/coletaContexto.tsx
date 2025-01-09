@@ -54,7 +54,7 @@ import GravarNovaColetaUseCase from '../../core/domain/usecases/device/database/
 import PegarNovasColetasUseCase from '../../core/domain/usecases/device/database/novaColeta/pegarNovasColetasUseCase';
 import { auditar } from '../../core/auditoriaHelper';
 import { getString } from '../../core/storageHelper';
-import { getParadasFromStorage } from '../utils/paradas';
+import { deleteParadasFromStorage, getParadasFromStorage, setParadasToStorage } from '../utils/paradas';
 
 interface ColetaContextData {
   enviarColeta(
@@ -322,32 +322,60 @@ export const ColetaProvider: React.FC = ({ children }: Props) => {
     const veiculoTeste = await pegarVeiculo();
     const codigoOs = coleta?.codigoOS;
     const codigoCliente = coleta?.codigoCliente;
+    const codigoVinculo = coleta?.codigoVinculo;
+
     let paradas: Parada[] = [];
 
+    // Função reutilizável para buscar e processar paradas
+    const obterParadas = async (codigo: number | string): Promise<Parada[]> => {
+      try {
+        const res = await getParadasFromStorage(codigo); // Busca no armazenamento
+        return res ? JSON.parse(res) : []; // Retorna array vazio se nulo/inválido
+      } catch (error) {
+        console.error('Erro ao obter paradas:', error);
+        return []; // Em caso de erro, retorna array vazio
+      }
+    };
+
+    // Busca as paradas dependendo das condições
     if (isNovaColeta) {
-      const res = await getParadasFromStorage(codigoCliente)
-      paradas = JSON.parse(res as string);
+      const codigo = isSincronizacao ? codigoVinculo : codigoCliente;
+      paradas = await obterParadas(codigo as string | number);
     } else {
-      const res = await getParadasFromStorage(codigoOs)
-      paradas = JSON.parse(res as string);
+      paradas = await obterParadas(codigoOs as number);
     }
 
-    const paradasFormatadas = paradas.map(parada => {
-      const dataInicio = new Date(`${parada.dataInicio.split('/').reverse().join('-')}T${parada.horaInicio}`);
-      const dataFim = new Date(`${parada.dataFim.split('/').reverse().join('-')}T${parada.horaFim}`);
+    // Formata as paradas, apenas se houver elementos
+    const paradasFormatadas = paradas.length > 0
+      ? paradas.map(parada => {
+        try {
+          // Valida se dataInicio e dataFim não são nulos
+          if (!parada.dataInicio || !parada.dataFim) {
+            throw new Error('Data de início ou fim é nula');
+          }
 
-      const formatDate = (date) => {
-        return date.toISOString().replace('T', ' ').split('.')[0];
-      };
+          // Criação das datas
+          const dataInicio = new Date(`${parada.dataInicio.split('/').reverse().join('-')}T${parada.horaInicio}`);
+          const dataFim = new Date(`${parada.dataFim.split('/').reverse().join('-')}T${parada.horaFim}`);
 
-      return {
-        ...parada,
-        dataInicio: formatDate(dataInicio),
-        dataFim: formatDate(dataFim)
-      };
-    });
+          // Função para formatar a data no formato ISO sem milissegundos
+          const formatDate = (date: Date) => {
+            return date.toISOString().replace('T', ' ').split('.')[0];
+          };
 
+          return {
+            ...parada,
+            dataInicio: formatDate(dataInicio),
+            dataFim: formatDate(dataFim)
+          };
+        } catch (error) {
+          console.error('Erro ao formatar parada:', error);
+          return parada; // Retorna o original se ocorrer erro
+        }
+      })
+      : []; // Retorna array vazio se não houver paradas
 
+    // Atualiza as paradas formatadas na coleta
     coleta.paradas = paradasFormatadas;
 
     if (configuracoes.obrigarUmaFotoOS && !coleta?.fotos?.length) {
@@ -390,6 +418,8 @@ export const ColetaProvider: React.FC = ({ children }: Props) => {
       }
 
       const vinculoOSAntigo = coleta.codigoVinculo;
+      coleta.codigoAntigo = vinculoOSAntigo
+
 
       coleta.codigoVinculo = coleta?.codigoOS
         ? `@VRCOLETAENVIADA:${coleta.codigoOS}`
@@ -399,14 +429,26 @@ export const ColetaProvider: React.FC = ({ children }: Props) => {
         auditar(`residuos sumiram em coletacontexto->antesdeenviarcoletaagendada${coleta.residuos}`);
       }
 
+      let response;
 
-      const response = isNovaColeta
-        ? !isSincronizacao && offline
-          ? await gravarNovaColetaLocal(coleta)
-          : await novaColeta(coleta, veiculoTeste?.codigo ?? 0)
-        : !isSincronizacao && offline
-          ? await gravarColetaAgendadaLocal(coleta)
-          : await enviarColetaAgendada(coleta, veiculoTeste?.codigo ?? 0, checkinsOS);
+      if (isNovaColeta) {
+        if (!isSincronizacao && offline) {
+          await gravarNovaColetaLocal(coleta);
+        } else {
+          response = await novaColeta(coleta, veiculoTeste?.codigo ?? 0);
+        }
+      } else {
+        if (!isSincronizacao && offline) {
+          await gravarColetaAgendadaLocal(coleta);
+        } else {
+          response = await enviarColetaAgendada(
+            coleta,
+            veiculoTeste?.codigo ?? 0,
+            checkinsOS
+          );
+        }
+      }
+
 
       let coletaGravadaLocalmente = false;
 
