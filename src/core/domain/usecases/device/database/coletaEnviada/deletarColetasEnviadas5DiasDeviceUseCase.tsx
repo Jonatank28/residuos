@@ -6,7 +6,7 @@ import { IDeviceOrdemServicoRepositorio } from '../../../../repositories/device/
 import { IDeviceResiduoRepositorio } from '../../../../repositories/device/residuoRepositorio';
 import { IDeviceMotivoRepositorio } from '../../../../repositories/device/deviceMotivoRepositorio';
 import { IDeviceMtrRepositorio } from '../../../../repositories/device/mtrRepositorio';
-import { deleteAllParadasFromStorage, getParadasFromAllStorage } from '../../../../../../app/utils/paradas';
+import { deleteAllParadasFromStorage, deleteParadasFromStorage, getParadasFromAllStorage } from '../../../../../../app/utils/paradas';
 
 export default class DeletarColetasEnviadas5DiasDeviceUseCase implements UseCase<void, void | Error> {
   constructor(
@@ -21,8 +21,6 @@ export default class DeletarColetasEnviadas5DiasDeviceUseCase implements UseCase
   async execute(): Promise<void | Error> {
     try {
       const coletas = await this.iDeviceOrdemServicoRepositorio.pegarColetasEnviadas5Dias();
-      console.log("🚀  coletas sqlite", coletas);
-      // await deleteAllParadasFromStorage()
       await getParadasFromAllStorage()
 
       if (coletas.length > 0) {
@@ -33,6 +31,9 @@ export default class DeletarColetasEnviadas5DiasDeviceUseCase implements UseCase
               : `@VRCOLETAENVIADA$NOVACOLETA:${coleta.codigoCliente}$RETIRADO`;
 
           const residuosOS = await this.iDeviceResiduoRepositorio.pegarResiduosVinculo(coleta?.codigoVinculo ?? '');
+
+          // Deleta a parada da coleta do asyncStorage
+          await deleteParadasFromStorage(coleta?.codigoVinculo ?? '');
 
           await this.iDeviceResiduoRepositorio.deletarResiduo(coleta?.codigoVinculo ?? '');
           await this.iDeviceOrdemServicoRepositorio.deletarColetaEnviada(coleta?.codigoVinculo ?? '');
@@ -45,7 +46,7 @@ export default class DeletarColetasEnviadas5DiasDeviceUseCase implements UseCase
           await this.iDeviceMtrDeviceRepositorio.deletarMtr(coleta?.codigoVinculo ?? '');
           await this.iDeviceMtrDeviceRepositorio.deletarEstadosMtr(coleta?.codigoVinculo ?? '');
 
-          console.log('DELETA 5 DIAS: ', coleta.codigoVinculo)
+          // console.log('DELETA 5 DIAS: ', coleta.codigoVinculo)
           await this.iDeviceResiduoRepositorio.deletarResiduoSecundarioPesagem(coleta?.codigoVinculo ?? '');
 
           if (residuosOS && residuosOS.length > 0) {
